@@ -1,0 +1,18 @@
+/* Custom Styles */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Card Hover Animations */
+.hover-card-up {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card-up:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px -10px rgba(37, 99, 235, 0.12);
+}

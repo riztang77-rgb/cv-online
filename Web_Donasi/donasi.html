@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pelita Berbagi — Platform Donasi Tercatat & Terverifikasi</title>
+<meta name="description" content="Pelita Berbagi menghubungkan donatur dengan program sosial, bencana, pendidikan, dan kesehatan yang tercatat dan terverifikasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,560;9..144,650&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="donasi.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#beranda" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+          <path d="M20 3 C20 3 8 13 8 23 a12 12 0 0 0 24 0 C32 13 20 3 20 3Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M20 12 C20 12 13 18.5 13 24.5 a7 7 0 0 0 14 0 C27 18.5 20 12 20 12Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-text">Pelita<em>Berbagi</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+      <a href="#beranda" class="nav-link active" data-nav>Beranda</a>
+      <a href="#program" class="nav-link" data-nav>Program</a>
+      <a href="#tentang" class="nav-link" data-nav>Tentang</a>
+      <a href="#blog" class="nav-link" data-nav>Blog</a>
+      <a href="#halaman" class="nav-link" data-nav>Halaman</a>
+      <a href="#kontak" class="nav-link" data-nav>Kontak</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:088985093837" class="header-phone">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>0889-8509-3837</span>
+      </a>
+      <a href="#program" class="btn btn-primary btn-sm">Donasi Sekarang</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO / BERANDA ===== -->
+<section class="hero" id="beranda">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Platform Donasi Terpercaya &amp; Terverifikasi</p>
+      <h1 class="hero-title">Bantuan yang <em>tercatat</em>,<br>harapan yang <em>tersalurkan</em>.</h1>
+      <p class="hero-desc">Setiap donasi yang masuk ke Pelita Berbagi dicatat rapi dari rekening hingga penerima manfaat — bisa Anda telusuri sendiri, kapan saja, sampai rupiah terakhir.</p>
+      <div class="hero-cta">
+        <a href="#program" class="btn btn-primary">Mulai Berdonasi</a>
+        <a href="#halaman" class="btn btn-ghost">Lihat Laporan Dana</a>
+      </div>
+
+      <dl class="hero-stats">
+        <div class="stat">
+          <dt data-count="12480" data-suffix="+">0</dt>
+          <dd>Donatur aktif</dd>
+        </div>
+        <div class="stat">
+          <dt data-prefix="Rp " data-count="4.2" data-decimals="1" data-suffix=" M">0</dt>
+          <dd>Dana tersalurkan</dd>
+        </div>
+        <div class="stat">
+          <dt data-count="186" data-suffix="+">0</dt>
+          <dd>Program selesai</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="hero-feature">
+      <article class="receipt-card">
+        <div class="receipt-photo">
+          <img src="https://picsum.photos/seed/sumurwonorejo/640/420" alt="Warga Desa Wonorejo mengambil air bersih dari sumur bantuan" loading="lazy">
+          <span class="stamp" aria-hidden="true">Terverifikasi</span>
+        </div>
+        <div class="receipt-body">
+          <p class="receipt-tag">Sosial &middot; Air Bersih</p>
+          <h3>Bangun Sumur Bersih untuk Desa Wonorejo</h3>
+          <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <span class="progress-fill" data-target="70" style="width:0%"></span>
+          </div>
+          <div class="receipt-line">
+            <span>Terkumpul</span>
+            <b data-mono>Rp 31.750.000</b>
+          </div>
+          <div class="receipt-line muted">
+            <span>Target dana</span>
+            <b data-mono>Rp 45.000.000</b>
+          </div>
+          <div class="receipt-foot">
+            <span>231 donatur</span>
+            <span>9 hari lagi</span>
+          </div>
+          <a href="#program" class="btn btn-primary btn-block">Donasi Sekarang</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAMPAIGNS / PROGRAM ===== -->
+<section class="section" id="program">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Program Aktif</p>
+      <h2>Program yang membutuhkan<br>uluran tangan Anda.</h2>
+    </div>
+
+    <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Saring kategori program">
+      <button class="filter-btn active" data-filter="semua">Semua</button>
+      <button class="filter-btn" data-filter="bencana">Bencana Alam</button>
+      <button class="filter-btn" data-filter="pendidikan">Pendidikan</button>
+      <button class="filter-btn" data-filter="kesehatan">Kesehatan</button>
+      <button class="filter-btn" data-filter="sosial">Sosial</button>
+    </div>
+
+    <div class="campaign-grid" id="campaignGrid">
+
+      <article class="campaign-card" data-category="sosial">
+        <div class="campaign-photo">
+          <img src="https://picsum.photos/seed/sumurwonorejo2/500/340" alt="Pembangunan sumur bersih di Desa Wonorejo" loading="lazy">
+          <span class="tag">Sosial</span>
+        </div>
+        <div class="campaign-body">
+          <h3>Bangun Sumur Bersih Desa Wonorejo</h3>
+          <p>Membangun titik air bersih bagi 64 keluarga yang selama ini berjalan 2 km untuk mengambil air.</p>
+          <div class="progress"><span class="progress-fill" data-target="70" style="width:0%"></span></div>
+          <div class="campaign-meta">
+            <b data-mono>Rp 31.750.000</b><span>dari Rp 45.000.000</span>
+          </div>
+          <div class="campaign-foot">
+            <span>231 donatur</span><span>9 hari lagi</span>
+          </div>
+          <a href="#kontak" class="btn btn-outline btn-block">Donasi Sekarang</a>
+        </div>
+      </article>
+
+      <article class="campaign-card" data-category="kesehatan">
+        <div class="campaign-photo">
+          <img src="https://picsum.photos/seed/operasiibusari/500/340" alt="Ibu Sari yang membutuhkan biaya operasi jantung" loading="lazy">
+          <span class="tag">Kesehatan</span>
+        </div>
+        <div class="campaign-body">
+          <h3>Biaya Operasi Jantung Ibu Sari</h3>
+          <p>Ibu tunggal dua anak ini membutuhkan tindakan bypass jantung segera di RS rujukan.</p>
+          <div class="progress"><span class="progress-fill" data-target="61" style="width:0%"></span></div>
+          <div class="campaign-meta">
+            <b data-mono>Rp 52.300.000</b><span>dari Rp 85.000.000</span>
+          </div>
+          <div class="campaign-foot">
+            <span>412 donatur</span><span>15 hari lagi</span>
+          </div>
+          <a href="#kontak" class="btn btn-outline btn-block">Donasi Sekarang</a>
+        </div>
+      </article>
+
+      <article class="campaign-card" data-category="bencana">
+        <div class="campaign-photo">
+          <img src="https://picsum.photos/seed/sekolahbanjir/500/340" alt="Renovasi sekolah darurat pasca banjir" loading="lazy">
+          <span class="tag">Bencana Alam</span>
+        </div>
+        <div class="campaign-body">
+          <h3>Renovasi Sekolah Darurat Pasca Banjir</h3>
+          <p>3 ruang kelas rusak berat perlu dibangun ulang agar 210 murid bisa kembali belajar.</p>
+          <div class="progress"><span class="progress-fill" data-target="81" style="width:0%"></span></div>
+          <div class="campaign-meta">
+            <b data-mono>Rp 97.400.000</b><span>dari Rp 120.000.000</span>
+          </div>
+          <div class="campaign-foot">
+            <span>587 donatur</span><span>21 hari lagi</span>
+          </div>
+          <a href="#kontak" class="btn btn-outline btn-block">Donasi Sekarang</a>
+        </div>
+      </article>
+
+      <article class="campaign-card" data-category="pendidikan">
+        <div class="campaign-photo">
+          <img src="https://picsum.photos/seed/beasiswayatim/500/340" alt="Beasiswa untuk anak yatim tahun ajaran baru" loading="lazy">
+          <span class="tag">Pendidikan</span>
+        </div>
+        <div class="campaign-body">
+          <h3>Beasiswa Anak Yatim Tahun Ajaran Baru</h3>
+          <p>Membiayai SPP dan perlengkapan sekolah 40 anak yatim binaan untuk satu tahun penuh.</p>
+          <div class="progress"><span class="progress-fill" data-target="31" style="width:0%"></span></div>
+          <div class="campaign-meta">
+            <b data-mono>Rp 18.900.000</b><span>dari Rp 60.000.000</span>
+          </div>
+          <div class="campaign-foot">
+            <span>164 donatur</span><span>27 hari lagi</span>
+          </div>
+          <a href="#kontak" class="btn btn-outline btn-block">Donasi Sekarang</a>
+        </div>
+      </article>
+
+      <article class="campaign-card" data-category="bencana">
+        <div class="campaign-photo">
+          <img src="https://picsum.photos/seed/dapurumumgempa/500/340" alt="Dapur umum untuk pengungsi gempa Cianjur" loading="lazy">
+          <span class="tag">Bencana Alam</span>
+          <span class="tag tag-done">Tercapai</span>
+        </div>
+        <div class="campaign-body">
+          <h3>Dapur Umum untuk Pengungsi Gempa</h3>
+          <p>Menyediakan 1.500 porsi makan harian selama masa tanggap darurat di titik pengungsian.</p>
+          <div class="progress"><span class="progress-fill" data-target="100" style="width:0%"></span></div>
+          <div class="campaign-meta">
+            <b data-mono>Rp 75.000.000</b><span>dari Rp 75.000.000</span>
+          </div>
+          <div class="campaign-foot">
+            <span>903 donatur</span><span>Selesai disalurkan</span>
+          </div>
+          <a href="#halaman" class="btn btn-outline btn-block">Lihat Laporan</a>
+        </div>
+      </article>
+
+      <article class="campaign-card" data-category="kesehatan">
+        <div class="campaign-photo">
+          <img src="https://picsum.photos/seed/kursiroda/500/340" alt="Bantuan kursi roda untuk penyandang difabel" loading="lazy">
+          <span class="tag">Kesehatan</span>
+        </div>
+        <div class="campaign-body">
+          <h3>Bantuan Kursi Roda untuk Difabel</h3>
+          <p>Menyediakan 20 unit kursi roda bagi penyandang disabilitas kurang mampu di 4 kecamatan.</p>
+          <div class="progress"><span class="progress-fill" data-target="45" style="width:0%"></span></div>
+          <div class="campaign-meta">
+            <b data-mono>Rp 11.200.000</b><span>dari Rp 25.000.000</span>
+          </div>
+          <div class="campaign-foot">
+            <span>98 donatur</span><span>18 hari lagi</span>
+          </div>
+          <a href="#kontak" class="btn btn-outline btn-block">Donasi Sekarang</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / TENTANG ===== -->
+<section class="section section-alt" id="tentang">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="https://picsum.photos/seed/relawanpelita/560/680" alt="Relawan Pelita Berbagi menyerahkan bantuan langsung ke penerima manfaat" loading="lazy">
+      <div class="about-badge">
+        <strong>2016</strong>
+        <span>Berdiri &amp; mulai mencatat setiap donasi</span>
+      </div>
+    </div>
+
+    <div class="about-copy">
+      <p class="eyebrow">Tentang Kami</p>
+      <h2>Menghubungkan kebaikan<br>dengan cara yang tercatat.</h2>
+      <p class="lead">Pelita Berbagi lahir dari satu keresahan sederhana: donatur sulit tahu ke mana uangnya benar-benar pergi. Sejak 2016, kami membangun sistem verifikasi berlapis — setiap program diperiksa lapangan, setiap rupiah dicatat, dan setiap laporan dibuka untuk publik.</p>
+
+      <div class="about-stats">
+        <div><b>9</b><span>Tahun beroperasi</span></div>
+        <div><b>52</b><span>Mitra lembaga</span></div>
+        <div><b>34</b><span>Kota terjangkau</span></div>
+        <div><b>98%</b><span>Dana tersalurkan langsung</span></div>
+      </div>
+
+      <ul class="values">
+        <li>
+          <span class="values-icon">✓</span>
+          <div><b>Transparan</b><p>Laporan dana per program bisa diakses siapa saja, bukan hanya donatur.</p></div>
+        </li>
+        <li>
+          <span class="values-icon">✓</span>
+          <div><b>Amanah</b><p>Setiap program diverifikasi tim lapangan sebelum dibuka untuk donasi.</p></div>
+        </li>
+        <li>
+          <span class="values-icon">✓</span>
+          <div><b>Tepat Sasaran</b><p>Bantuan disalurkan langsung ke penerima, didampingi hingga tuntas.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="steps">
+      <div class="step">
+        <span class="step-no">01</span>
+        <h3>Pilih Program</h3>
+        <p>Telusuri program terverifikasi sesuai kategori yang ingin Anda bantu.</p>
+      </div>
+      <div class="step">
+        <span class="step-no">02</span>
+        <h3>Kirim Donasi</h3>
+        <p>Transfer melalui kanal pembayaran resmi, dapat kwitansi digital otomatis.</p>
+      </div>
+      <div class="step">
+        <span class="step-no">03</span>
+        <h3>Pantau Laporan</h3>
+        <p>Ikuti perkembangan penyaluran dana sampai program dinyatakan tuntas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section class="section" id="blog">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Cerita &amp; Kabar</p>
+      <h2>Blog Pelita Berbagi</h2>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card blog-card-large">
+        <div class="blog-photo"><img src="https://picsum.photos/seed/blogsumurcerita/700/460" alt="Cerita warga Desa Wonorejo" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-meta"><span class="tag-text">Cerita Program</span> &middot; 2 Agustus 2026</p>
+          <h3>Cerita di Balik Sumur Bersih Wonorejo</h3>
+          <p>Selama bertahun-tahun warga berjalan dua kilometer setiap pagi hanya untuk air bersih. Begini perjalanan program ini dari survei lapangan hingga hari pertama air mengalir.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-photo"><img src="https://picsum.photos/seed/blogtipsdonasi/500/320" alt="Tips memastikan donasi tepat sasaran" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-meta"><span class="tag-text">Panduan</span> &middot; 28 Juli 2026</p>
+          <h3>5 Cara Memastikan Donasi Anda Tepat Sasaran</h3>
+          <p>Sebelum menekan tombol donasi, ada lima hal sederhana yang bisa Anda periksa dari sebuah program penggalangan dana.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-photo"><img src="https://picsum.photos/seed/blogtriwulan/500/320" alt="Laporan penyaluran bantuan triwulan" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-meta"><span class="tag-text">Laporan</span> &middot; 15 Juli 2026</p>
+          <h3>Laporan Penyaluran Bantuan Triwulan II 2026</h3>
+          <p>Rincian lengkap dana yang masuk dan tersalurkan pada periode April–Juni 2026 dari seluruh program aktif.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-photo"><img src="https://picsum.photos/seed/blogibusari/500/320" alt="Kisah Ibu Sari setelah operasi jantung" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-meta"><span class="tag-text">Kisah Penerima</span> &middot; 6 Juli 2026</p>
+          <h3>Kisah Ibu Sari: Harapan Baru Usai Operasi</h3>
+          <p>Tiga bulan setelah tindakan bypass jantung, Ibu Sari kembali bisa mengantar anaknya ke sekolah setiap pagi.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-photo"><img src="https://picsum.photos/seed/blogverifikasi/500/320" alt="Proses verifikasi program di Pelita Berbagi" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-meta"><span class="tag-text">Di Balik Layar</span> &middot; 29 Juni 2026</p>
+          <h3>Mengenal Proses Verifikasi Program Kami</h3>
+          <p>Tidak semua pengajuan program lolos. Ini tahapan yang dilalui tim lapangan sebelum sebuah program tayang.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGES / HALAMAN ===== -->
+<section class="section section-alt" id="halaman">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Halaman</p>
+      <h2>Informasi selengkapnya<br>tentang Pelita Berbagi.</h2>
+    </div>
+
+    <div class="pages-tabs" role="tablist" aria-label="Pilih halaman">
+      <button class="pages-tab active" data-page="faq" role="tab" aria-selected="true">FAQ</button>
+      <button class="pages-tab" data-page="testimoni" role="tab" aria-selected="false">Testimoni</button>
+      <button class="pages-tab" data-page="laporan" role="tab" aria-selected="false">Laporan Keuangan</button>
+      <button class="pages-tab" data-page="kebijakan" role="tab" aria-selected="false">Kebijakan Privasi</button>
+    </div>
+
+    <!-- FAQ -->
+    <div class="pages-panel active" id="page-faq" role="tabpanel">
+      <div class="accordion">
+        <div class="acc-item active">
+          <button class="acc-head">
+            <span>Apakah donasi saya benar-benar sampai ke penerima?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body"><p>Ya. Setiap program didampingi tim lapangan dan dana disalurkan bertahap sesuai kebutuhan riil, bukan sekaligus di awal. Bukti penyaluran diunggah ke laporan publik.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">
+            <span>Berapa potongan biaya administrasi dari donasi saya?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body"><p>Pelita Berbagi tidak memotong biaya administrasi dari nominal donasi. Biaya operasional platform berasal dari dana kemitraan terpisah.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">
+            <span>Bagaimana cara mengajukan program penggalangan dana?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body"><p>Hubungi tim kami melalui halaman Kontak dengan melampirkan proposal, data penerima manfaat, dan dokumen pendukung untuk diverifikasi lapangan.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">
+            <span>Apakah saya mendapat bukti/kwitansi donasi?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body"><p>Ya, kwitansi digital dikirimkan otomatis ke email Anda setelah pembayaran terverifikasi, lengkap dengan nomor referensi.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">
+            <span>Metode pembayaran apa saja yang tersedia?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body"><p>Transfer bank, e-wallet, QRIS, dan kartu debit/kredit. Detail rekening resmi akan diberikan tim kami setelah Anda memilih program.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimoni -->
+    <div class="pages-panel" id="page-testimoni" role="tabpanel">
+      <div class="testi-grid">
+        <blockquote class="testi-card">
+          <p>"Yang bikin saya percaya adalah laporannya jelas — saya tahu persis sumur itu jadi dan dipakai warga."</p>
+          <footer>
+            <img src="https://picsum.photos/seed/donatur1/80/80" alt="Foto Rina Amelia">
+            <div><b>Rina Amelia</b><span>Donatur sejak 2021</span></div>
+          </footer>
+        </blockquote>
+        <blockquote class="testi-card">
+          <p>"Proses ajukan program untuk sekolah kami cepat dan pendampingannya sangat membantu sampai selesai."</p>
+          <footer>
+            <img src="https://picsum.photos/seed/donatur2/80/80" alt="Foto Bapak Hendra Wijaya">
+            <div><b>Hendra Wijaya</b><span>Kepala Sekolah, penerima program</span></div>
+          </footer>
+        </blockquote>
+        <blockquote class="testi-card">
+          <p>"Kwitansi digital langsung masuk email, dan saya bisa lihat update penyalurannya tiap bulan. Simpel."</p>
+          <footer>
+            <img src="https://picsum.photos/seed/donatur3/80/80" alt="Foto Dewi Lestari">
+            <div><b>Dewi Lestari</b><span>Donatur bulanan</span></div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Laporan Keuangan -->
+    <div class="pages-panel" id="page-laporan" role="tabpanel">
+      <div class="laporan-table">
+        <div class="laporan-row laporan-head">
+          <span>Periode</span><span>Dana Masuk</span><span>Dana Tersalurkan</span><span>Rasio</span>
+        </div>
+        <div class="laporan-row">
+          <span>Q2 2026 (Apr–Jun)</span><span data-mono>Rp 612.400.000</span><span data-mono>Rp 598.900.000</span>
+          <span class="laporan-bar"><i style="width:97%"></i></span>
+        </div>
+        <div class="laporan-row">
+          <span>Q1 2026 (Jan–Mar)</span><span data-mono>Rp 549.100.000</span><span data-mono>Rp 531.700.000</span>
+          <span class="laporan-bar"><i style="width:96%"></i></span>
+        </div>
+        <div class="laporan-row">
+          <span>Q4 2025 (Okt–Des)</span><span data-mono>Rp 703.800.000</span><span data-mono>Rp 690.200.000</span>
+          <span class="laporan-bar"><i style="width:98%"></i></span>
+        </div>
+      </div>
+      <p class="laporan-note">Laporan lengkap beserta bukti penyaluran per program tersedia dalam bentuk PDF. Hubungi tim kami di halaman Kontak untuk mengunduh salinan resmi.</p>
+    </div>
+
+    <!-- Kebijakan Privasi -->
+    <div class="pages-panel" id="page-kebijakan" role="tabpanel">
+      <div class="kebijakan-text">
+        <p>Pelita Berbagi mengumpulkan data pribadi donatur (nama, email, nomor telepon) hanya untuk keperluan verifikasi transaksi dan pengiriman kwitansi digital.</p>
+        <p>Data tidak pernah dijual atau dibagikan ke pihak ketiga untuk kepentingan komersial. Anda berhak meminta penghapusan data pribadi kapan saja melalui halaman Kontak.</p>
+        <p>Donasi dapat dilakukan secara anonim — nama Anda tidak akan ditampilkan di laporan publik apabila memilih opsi tersebut saat berdonasi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT US / KONTAK ===== -->
+<section class="section" id="kontak">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <p class="eyebrow">Hubungi Kami</p>
+      <h2>Ada pertanyaan?<br>Kami siap membantu.</h2>
+      <p class="lead">Untuk konsultasi program, kerja sama lembaga, atau bantuan donasi, silakan hubungi kami melalui kanal berikut.</p>
+
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div>
+            <b>Telepon / WhatsApp</b>
+            <a href="tel:088985093837">0889-8509-3837</a>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </span>
+          <div>
+            <b>Email</b>
+            <a href="mailto:halo@pelitaberbagi.id">halo@pelitaberbagi.id</a>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <b>Kantor</b>
+            <span>Jl. Melati Raya No. 21, Surakarta, Jawa Tengah</span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <div>
+            <b>Jam Operasional</b>
+            <span>Senin–Sabtu, 08.00–17.00 WIB</span>
+          </div>
+        </li>
+      </ul>
+
+      <a href="https://wa.me/6288985093837" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10.1 9 9.6 7.7 9.4 7.2c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
+        Chat via WhatsApp
+      </a>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="cf-name">Nama Lengkap</label>
+        <input type="text" id="cf-name" name="name" placeholder="Nama Anda" required>
+        <span class="form-error">Nama wajib diisi.</span>
+      </div>
+      <div class="form-row">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" placeholder="nama@email.com" required>
+        <span class="form-error">Masukkan email yang valid.</span>
+      </div>
+      <div class="form-row">
+        <label for="cf-subject">Subjek</label>
+        <select id="cf-subject" name="subject" required>
+          <option value="" disabled selected>Pilih topik</option>
+          <option value="donasi">Pertanyaan Donasi</option>
+          <option value="program">Ajukan Program</option>
+          <option value="kerjasama">Kerja Sama Lembaga</option>
+          <option value="lainnya">Lainnya</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="cf-message">Pesan</label>
+        <textarea id="cf-message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+        <span class="form-error">Pesan tidak boleh kosong.</span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+      <p class="form-success" id="formSuccess">Terima kasih! Pesan Anda telah terkirim, tim kami akan segera menghubungi Anda.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <span class="brand-text light">Pelita<em>Berbagi</em></span>
+      <p>Platform donasi yang mencatat setiap rupiah dari donatur hingga penerima manfaat.</p>
+      <div class="footer-social" aria-label="Sosial media">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Twitter / X">X</a>
+        <a href="#" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Jelajahi</h4>
+      <a href="#beranda">Beranda</a>
+      <a href="#program">Program</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#blog">Blog</a>
+      <a href="#halaman">Halaman</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <a href="tel:088985093837">0889-8509-3837</a>
+      <a href="mailto:halo@pelitaberbagi.id">halo@pelitaberbagi.id</a>
+      <span>Surakarta, Jawa Tengah</span>
+    </div>
+
+    <div class="footer-col footer-news">
+      <h4>Kabar Berkala</h4>
+      <p>Dapatkan laporan program terbaru setiap bulan.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="Email Anda" required aria-label="Email untuk newsletter">
+        <button type="submit" aria-label="Berlangganan">→</button>
+      </form>
+      <p class="newsletter-success" id="newsletterSuccess">Terima kasih telah berlangganan!</p>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© 2026 Pelita Berbagi. Seluruh hak cipta dilindungi.</span>
+    <span>Dibangun dengan amanah, untuk yang membutuhkan.</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/6288985093837" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10.1 9 9.6 7.7 9.4 7.2c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
+</a>
+
+<button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">↑</button>
+
+<script src="donasi.js"></script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderly — Perjalanan di Luar Biasa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="ri-compass-3-line logo-icon"></i>
+            <div>
+                <span class="logo-text">Wanderly</span>
+                <span class="logo-sub">Lebih dari Biasa</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#" class="active">Beranda</a>
+            <a href="#destinations">Destinasi</a>
+            <a href="#experiences">Pengalaman</a>
+            <a href="#hotels">Hotel</a>
+            <a href="#guides">Panduan</a>
+            <a href="#about">Tentang Kami</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn"><i class="ri-search-line"></i></button>
+            <button class="icon-btn"><i class="ri-heart-line"></i></button>
+            <button class="icon-btn"><i class="ri-user-line"></i></button>
+            <button class="btn-primary">Rencanakan Perjalanan</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-tag"><i class="ri-plane-line"></i> JELAJAHI DUNIA</div>
+            <h1>Perjalanan yang<br>Abadi dalam <span class="accent-text">Kenangan</span></h1>
+            <p>Destinasi terkurasi. Akomodasi pilihan. Pengalaman tak terlupakan.</p>
+            <div class="hero-btns">
+                <a href="#destinations" class="btn-hero-primary">Jelajahi Destinasi <i class="ri-arrow-right-line"></i></a>
+                <button class="btn-hero-video"><i class="ri-play-fill"></i> Tonton Video</button>
+            </div>
+        </div>
+
+        <div class="search-bar-container">
+            <div class="search-item">
+                <i class="ri-map-pin-line search-icon"></i>
+                <div>
+                    <label>Ke mana?</label>
+                    <input type="text" placeholder="Cari destinasi">
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="search-item">
+                <i class="ri-calendar-line search-icon"></i>
+                <div>
+                    <label>Check-in</label>
+                    <input type="text" placeholder="Pilih tanggal" onfocus="(this.type='date')">
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="search-item">
+                <i class="ri-calendar-event-line search-icon"></i>
+                <div>
+                    <label>Check-out</label>
+                    <input type="text" placeholder="Pilih tanggal" onfocus="(this.type='date')">
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="search-item">
+                <i class="ri-user-3-line search-icon"></i>
+                <div>
+                    <label>Wisatawan</label>
+                    <span class="traveler-val">2 Dewasa, 0 Anak</span>
+                </div>
+            </div>
+            <button class="btn-search">Cari</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon"><i class="ri-map-pin-user-line"></i></div>
+            <div>
+                <h4>Tempat Pilihan</h4>
+                <p>Kami pilih destinasi terbaik secara personal untuk Anda.</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="ri-price-tag-3-line"></i></div>
+            <div>
+                <h4>Jaminan Harga Terbaik</h4>
+                <p>Dapatkan harga terbaik tanpa biaya tersembunyi.</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="ri-customer-service-2-line"></i></div>
+            <div>
+                <h4>Dukungan 24/7</h4>
+                <p>Ahli perjalanan kami siap membantu kapan saja.</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="ri-shield-check-line"></i></div>
+            <div>
+                <h4>Pemesanan Aman</h4>
+                <p>Pesan dengan percaya diri melalui pembayaran aman.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="section">
+        <div class="section-header">
+            <div>
+                <h2>Destinasi Populer</h2>
+                <p>Destinasi favorit wisatawan saat ini</p>
+            </div>
+            <a href="#" class="view-all">Lihat Semua Destinasi <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="destinations-grid">
+            <div class="dest-card">
+                <button class="wishlist-btn"><i class="ri-heart-line"></i></button>
+                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Santorini">
+                <div class="dest-info">
+                    <h3>Santorini, Yunani</h3>
+                    <div class="dest-meta">
+                        <span><i class="ri-star-fill star"></i> 4.8 (2.3k)</span>
+                        <span class="price">Mulai <strong>$799</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <button class="wishlist-btn"><i class="ri-heart-line"></i></button>
+                <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80" alt="Phuket">
+                <div class="dest-info">
+                    <h3>Phuket, Thailand</h3>
+                    <div class="dest-meta">
+                        <span><i class="ri-star-fill star"></i> 4.7 (1.8k)</span>
+                        <span class="price">Mulai <strong>$699</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <button class="wishlist-btn"><i class="ri-heart-line"></i></button>
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali">
+                <div class="dest-info">
+                    <h3>Bali, Indonesia</h3>
+                    <div class="dest-meta">
+                        <span><i class="ri-star-fill star"></i> 4.9 (3.1k)</span>
+                        <span class="price">Mulai <strong>$649</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <button class="wishlist-btn"><i class="ri-heart-line"></i></button>
+                <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=800&q=80" alt="Banff">
+                <div class="dest-info">
+                    <h3>Banff, Kanada</h3>
+                    <div class="dest-meta">
+                        <span><i class="ri-star-fill star"></i> 4.8 (1.2k)</span>
+                        <span class="price">Mulai <strong>$899</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-banner">
+        <div class="banner-content">
+            <span class="promo-tag">PENAWARAN TERBATAS</span>
+            <h2>Promo Liburan Musim Panas</h2>
+            <p>Diskon hingga 30% untuk destinasi pilihan</p>
+            <p class="promo-sub">Pesan perjalanan impian Anda sekarang dan hemat besar untuk akomodasi eksklusif pilihan kami.</p>
+            <a href="#" class="btn-white">Lihat Penawaran <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="discount-badge">
+            <span>HINGGA</span>
+            <strong>30%</strong>
+            <span>DISKON</span>
+        </div>
+    </section>
+
+    <section id="experiences" class="section">
+        <div class="section-header">
+            <div>
+                <h2>Pengalaman Perjalanan</h2>
+                <p>Pengalaman terkurasi agar perjalanan Anda tak terlupakan</p>
+            </div>
+            <a href="#" class="view-all">Lihat Semua Pengalaman <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="exp-grid">
+            <div class="exp-card">
+                <div class="exp-img">
+                    <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=800&q=80" alt="Balon Udara">
+                    <div class="exp-badge"><i class="ri-hot-air-balloon-line"></i></div>
+                </div>
+                <div class="exp-info">
+                    <h3>Naik Balon Udara</h3>
+                    <p class="location">Cappadocia, Turki</p>
+                    <div class="exp-footer">
+                        <span>Mulai <strong>$199</strong> / orang</span>
+                        <i class="ri-arrow-right-line arrow-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-img">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Selam Scuba">
+                    <div class="exp-badge"><i class="ri-footprint-line"></i></div>
+                </div>
+                <div class="exp-info">
+                    <h3>Petualangan Selam Scuba</h3>
+                    <p class="location">Maladewa</p>
+                    <div class="exp-footer">
+                        <span>Mulai <strong>$159</strong> / orang</span>
+                        <i class="ri-arrow-right-line arrow-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-img">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Safari Satwa Liar">
+                    <div class="exp-badge"><i class="ri-tree-line"></i></div>
+                </div>
+                <div class="exp-info">
+                    <h3>Safari Satwa Liar</h3>
+                    <p class="location">Masai Mara, Kenya</p>
+                    <div class="exp-footer">
+                        <span>Mulai <strong>$249</strong> / orang</span>
+                        <i class="ri-arrow-right-line arrow-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-img">
+                    <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80" alt="Aurora Borealis">
+                    <div class="exp-badge"><i class="ri-sun-line"></i></div>
+                </div>
+                <div class="exp-info">
+                    <h3>Tur Aurora Borealis</h3>
+                    <p class="location">Islandia</p>
+                    <div class="exp-footer">
+                        <span>Mulai <strong>$299</strong> / orang</span>
+                        <i class="ri-arrow-right-line arrow-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hotels" class="section bg-white-section">
+        <div class="section-header">
+            <div>
+                <h2>Hotel & Akomodasi Mewah</h2>
+                <p>Akomodasi pilihan dengan kenyamanan kelas dunia</p>
+            </div>
+            <a href="#" class="view-all">Lihat Semua Hotel <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="hotels-grid">
+            <div class="hotel-card">
+                <div class="hotel-img">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Vila Overwater">
+                    <span class="hotel-tag">Mewah Bintang 5</span>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-header">
+                        <h3>Soneva Jani Overwater Villa</h3>
+                        <div class="rating"><i class="ri-star-fill star"></i> 4.9</div>
+                    </div>
+                    <p class="hotel-location"><i class="ri-map-pin-line"></i> Noonu Atoll, Maladewa</p>
+                    <p class="hotel-desc">Akses laguna pribadi, atap yang bisa dibuka untuk stargazing, dan layanan pelayan pribadi.</p>
+                    <div class="hotel-footer">
+                        <span>Mulai <strong>$1.250</strong> / malam</span>
+                        <button class="btn-book-sm">Pesan Menginap</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-img">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Resor Alpen">
+                    <span class="hotel-tag">Resor Boutique</span>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-header">
+                        <h3>Amangiri Resort & Spa</h3>
+                        <div class="rating"><i class="ri-star-fill star"></i> 4.8</div>
+                    </div>
+                    <p class="hotel-location"><i class="ri-map-pin-line"></i> Utah, Amerika Serikat</p>
+                    <p class="hotel-desc">Menyatu dengan lanskap batu merah yang dramatis, kolam infinity, dan perawatan wellness holistik.</p>
+                    <div class="hotel-footer">
+                        <span>Mulai <strong>$980</strong> / malam</span>
+                        <button class="btn-book-sm">Pesan Menginap</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-img">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Hotel Istana">
+                    <span class="hotel-tag">Istana Bersejarah</span>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-header">
+                        <h3>Raffles Hotel Singapore</h3>
+                        <div class="rating"><i class="ri-star-fill star"></i> 4.9</div>
+                    </div>
+                    <p class="hotel-location"><i class="ri-map-pin-line"></i> Beach Road, Singapura</p>
+                    <p class="hotel-desc">Hotel mewah bergaya kolonial ikonik dengan taman tropis yang rimbun dan bar legendaris.</p>
+                    <div class="hotel-footer">
+                        <span>Mulai <strong>$850</strong> / malam</span>
+                        <button class="btn-book-sm">Pesan Menginap</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guides" class="section">
+        <div class="section-header">
+            <div>
+                <h2>Panduan & Tips Perjalanan</h2>
+                <p>Wawasan ahli untuk merencanakan perjalanan berikutnya</p>
+            </div>
+            <a href="#" class="view-all">Lihat Semua Panduan <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="guides-grid">
+            <article class="guide-card">
+                <div class="guide-img">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Panduan Packing">
+                    <span class="guide-cat">Tips & Trik</span>
+                </div>
+                <div class="guide-content">
+                    <div class="guide-meta"><i class="ri-time-line"></i> 5 menit baca • Oleh Sarah Jenkins</div>
+                    <h3>Panduan Packing Terlengkap untuk Liburan Pulau Mewah</h3>
+                    <p>Temukan apa yang perlu dibawa untuk liburan tropis tanpa membawa koper berlebihan.</p>
+                    <a href="#" class="read-more">Baca Panduan <i class="ri-arrow-right-s-line"></i></a>
+                </div>
+            </article>
+
+            <article class="guide-card">
+                <div class="guide-img">
+                    <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=800&q=80" alt="Wisatawan Solo">
+                    <span class="guide-cat">Panduan Destinasi</span>
+                </div>
+                <div class="guide-content">
+                    <div class="guide-meta"><i class="ri-time-line"></i> 8 menit baca • Oleh Alex Rivera</div>
+                    <h3>10 Destinasi Tersembunyi Terbaik untuk Dikunjungi di 2026</h3>
+                    <p>Hindari keramaian dengan tempat-tempat menakjubkan yang jarang dikunjungi di seluruh dunia.</p>
+                    <a href="#" class="read-more">Baca Panduan <i class="ri-arrow-right-s-line"></i></a>
+                </div>
+            </article>
+
+            <article class="guide-card">
+                <div class="guide-img">
+                    <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=800&q=80" alt="Pemesanan Tiket Pesawat">
+                    <span class="guide-cat">Anggaran</span>
+                </div>
+                <div class="guide-content">
+                    <div class="guide-meta"><i class="ri-time-line"></i> 6 menit baca • Oleh Michael Chen</div>
+                    <h3>Cara Memesan Tiket Kelas Satu dengan Setengah Harga</h3>
+                    <p>Tips cerdas tentang poin reward dan strategi pemesanan tiket musiman.</p>
+                    <a href="#" class="read-more">Baca Panduan <i class="ri-arrow-right-s-line"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=80" alt="Tentang Wanderly" class="about-img-main">
+                <div class="stat-card">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-text">Tahun Keunggulan dalam Perjalanan Khusus</div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="promo-tag">TENTANG WANDERLY</span>
+                <h2>Menciptakan Kenangan di Luar Biasa</h2>
+                <p>Didirikan pada 2014, Wanderly dibangun dengan janji sederhana: mengangkat perjalanan menjadi seni. Kami merancang perjalanan khusus yang menghubungkan wisatawan dengan budaya autentik, lanskap alami, dan kenyamanan tak tertandingi.</p>
+                <p>Tim ahli lokal kami di 60+ negara memastikan setiap itinerary disesuaikan dengan keinginan dan standar Anda.</p>
+
+                <div class="about-stats-grid">
+                    <div class="stat-item">
+                        <h3>50K+</h3>
+                        <p>Wisatawan Puas</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>120+</h3>
+                        <p>Destinasi</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>99.4%</h3>
+                        <p>Tingkat Kepuasan</p>
+                    </div>
+                </div>
+
+                <a href="#destinations" class="btn-primary-about">Mulai Perjalanan Anda Hari Ini</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="ri-compass-3-line logo-icon"></i>
+                    <div>
+                        <span class="logo-text">Wanderly</span>
+                        <span class="logo-sub">Lebih dari Biasa</span>
+                    </div>
+                </div>
+                <p>Kami membantu Anda menjelajahi dunia dengan perjalanan terkurasi dan pengalaman tak terlupakan.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Perusahaan</h4>
+                <ul>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#">Karier</a></li>
+                    <li><a href="#guides">Blog Kami</a></li>
+                    <li><a href="#">Pers</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dukungan</h4>
+                <ul>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Panduan Pemesanan</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Sumber Daya</h4>
+                <ul>
+                    <li><a href="#guides">Panduan Perjalanan</a></li>
+                    <li><a href="#destinations">Peta Destinasi</a></li>
+                    <li><a href="#">Asuransi Perjalanan</a></li>
+                    <li><a href="#">Kartu Hadiah</a></li>
+                    <li><a href="#">Ajak & Dapatkan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Buletin</h4>
+                <p>Berlangganan untuk mendapatkan penawaran perjalanan eksklus dan inspirasi di inbox Anda.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Masukkan email Anda" required>
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wanderly. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="travel.js"></script>
+</body>
+</html>

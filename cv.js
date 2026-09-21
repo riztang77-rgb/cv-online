@@ -3,17 +3,21 @@
 =========================*/
 
 var typed = new Typed(".text", {
+
     strings: [
         "Frontend Developer",
         "Backend Developer",
         "Web Developer",
         "UI / UX Designer"
     ],
+
     typeSpeed: 100,
     backSpeed: 60,
     backDelay: 1200,
     loop: true
+
 });
+
 
 /*=========================
     ACTIVE NAVBAR
@@ -49,6 +53,7 @@ window.addEventListener("scroll", () => {
 
 });
 
+
 /*=========================
     STICKY HEADER
 =========================*/
@@ -57,7 +62,10 @@ const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
 
-    header.classList.toggle("sticky", window.scrollY > 100);
+    header.classList.toggle(
+        "sticky",
+        window.scrollY > 100
+    );
 
 });
 
@@ -72,15 +80,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         e.preventDefault();
 
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
 
-            behavior: "smooth"
+        if (target) {
 
-        });
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
 
     });
 
 });
+
 
 /*=========================
     BUTTON ANIMATION
@@ -103,6 +118,7 @@ buttons.forEach(btn => {
     });
 
 });
+
 
 /*=========================
     CARD HOVER
@@ -127,6 +143,69 @@ cards.forEach(card => {
     });
 
 });
+
+
+/*=========================
+    PORTFOLIO HORIZONTAL SCROLL
+=========================*/
+
+const portfolio = document.querySelector(".portfolio-content");
+
+if (portfolio) {
+
+    portfolio.addEventListener("wheel", (e) => {
+
+        const maxScroll =
+            portfolio.scrollWidth - portfolio.clientWidth;
+
+        const currentScroll = portfolio.scrollLeft;
+
+        if (
+            (e.deltaY > 0 && currentScroll < maxScroll) ||
+            (e.deltaY < 0 && currentScroll > 0)
+        ) {
+
+            e.preventDefault();
+
+            portfolio.scrollLeft += e.deltaY;
+
+        }
+
+    }, { passive: false });
+
+}
+
+
+/*=========================
+    CERTIFICATE HORIZONTAL SCROLL
+=========================*/
+
+const certificateBox = document.querySelector(".certificate-box");
+
+if (certificateBox) {
+
+    certificateBox.addEventListener("wheel", (e) => {
+
+        const maxScroll =
+            certificateBox.scrollWidth - certificateBox.clientWidth;
+
+        const currentScroll = certificateBox.scrollLeft;
+
+        if (
+            (e.deltaY > 0 && currentScroll < maxScroll) ||
+            (e.deltaY < 0 && currentScroll > 0)
+        ) {
+
+            e.preventDefault();
+
+            certificateBox.scrollLeft += e.deltaY;
+
+        }
+
+    }, { passive: false });
+
+}
+
 
 /*=========================
     SCROLL FADE

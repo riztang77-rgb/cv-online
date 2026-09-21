@@ -1,0 +1,27 @@
+// =====================================================
+// LOGIN, DAFTAR, PROFIL
+// =====================================================
+function renderAuthArea(){
+ const el=document.getElementById('authArea'); if(!el)return;
+ if(currentUser){
+  el.innerHTML=`<div class="dropdown" style="position:relative"><button class="icon-btn" onclick="toggleDropdown('userPanel')"><img src="${avatar(currentUser.name)}" style="width:100%;height:100%;border-radius:50%;object-fit:cover"></button><div class="dropdown-panel" id="userPanel"><div style="padding:10px"><b>${currentUser.name}</b><div style="font-size:.72rem;color:var(--text-mut)">${currentUser.role==='admin'?'Administrator':'Anggota'} · ${currentUser.prov}</div></div><a href="#" class="notif-item" onclick="showPage('${currentUser.role==='admin'?'dash-admin':'dash-anggota'}');return false"><i class="fa-solid fa-gauge"></i> Dashboard</a><a href="#" class="notif-item" onclick="openMyCard();return false"><i class="fa-regular fa-id-card"></i> Kartu Anggota</a><a href="#" class="notif-item" onclick="logoutUser();return false"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></div></div>`;
+ }else{
+  el.innerHTML='<button class="btn-nc btn-ghost-nc" onclick="openLogin()">Masuk</button><button class="btn-nc btn-primary-nc" onclick="openRegister()">Daftar</button>';
+ }
+}
+function openLogin(){
+ Swal.fire({title:'Masuk ke Akun',html:'<input id="swal-email" class="swal2-input" placeholder="Email"><input id="swal-pass" type="password" class="swal2-input" placeholder="Kata Sandi"><select id="swal-role" class="swal2-input"><option value="member">Masuk sebagai Anggota</option><option value="admin">Masuk sebagai Admin (demo)</option></select>',confirmButtonText:'Masuk',confirmButtonColor:'#C1272D',showCancelButton:true,cancelButtonText:'Batal',preConfirm:()=>{const email=document.getElementById('swal-email').value.trim();const role=document.getElementById('swal-role').value;if(!email){Swal.showValidationMessage('Email wajib diisi');return false;}return {email,role};}}).then(r=>{if(r.isConfirmed)loginAs(r.value.role,r.value.email.split('@')[0]);});
+}
+function openRegister(){
+ Swal.fire({title:'Gabung Komunitas Nusantara',html:`<input id="swal-nama" class="swal2-input" placeholder="Nama Lengkap"><input id="swal-email2" class="swal2-input" placeholder="Email"><select id="swal-prov" class="swal2-input">${PROVINCES.map(p=>`<option>${p.n}</option>`).join('')}</select>`,confirmButtonText:'Daftar',confirmButtonColor:'#152A52',showCancelButton:true,cancelButtonText:'Batal',preConfirm:()=>{const nama=document.getElementById('swal-nama').value.trim();const prov=document.getElementById('swal-prov').value;if(!nama){Swal.showValidationMessage('Nama wajib diisi');return false;}return {nama,prov};}}).then(r=>{if(r.isConfirmed){currentUser={name:r.value.nama,role:'member',prov:r.value.prov,id:'KN-'+(1000+Math.floor(Math.random()*8999)),city:'-',bio:'Anggota baru komunitas.',skills:[]};renderAuthArea();fillProfileForm();Swal.fire({icon:'success',title:'Pendaftaran Berhasil!',text:`Selamat datang, ${currentUser.name}. ID: ${currentUser.id}`,confirmButtonColor:'#152A52'});}});
+}
+function loginAs(role,namePart){
+ const sample=role==='admin'?{name:'Admin Pusat',prov:'DKI Jakarta'}:{name:namePart.charAt(0).toUpperCase()+namePart.slice(1),prov:MEMBERS[Math.floor(Math.random()*MEMBERS.length)].prov};
+ currentUser={name:sample.name,role,prov:sample.prov,id:role==='admin'?'ADM-0001':'KN-'+(1000+Math.floor(Math.random()*8999)),city:'-',bio:'Anggota aktif komunitas nusantara.',skills:['Kewirausahaan']};
+ renderAuthArea();fillProfileForm();renderAdminTables();Swal.fire({icon:'success',title:'Berhasil Masuk',text:`Halo, ${currentUser.name}!`,timer:1400,showConfirmButton:false});
+}
+function logoutUser(){currentUser=null;renderAuthArea();showPage('beranda');Swal.fire({icon:'info',title:'Kamu telah keluar',timer:1100,showConfirmButton:false});}
+function requireLogin(cb){if(currentUser){cb();return;}Swal.fire({icon:'warning',title:'Masuk diperlukan',text:'Silakan masuk atau daftar terlebih dahulu.',confirmButtonColor:'#152A52'}).then(r=>{if(r.isConfirmed)openLogin();});}
+function fillProfileForm(){if(!currentUser)return;const n=document.getElementById('profNama');const b=document.getElementById('profBio');const l=document.getElementById('profLoc');const s=document.getElementById('profSkill');if(n)n.value=currentUser.name;if(b)b.value=currentUser.bio;if(l)l.value=currentUser.prov;if(s)s.value=currentUser.skills.join(', ');}
+function saveProfile(){if(!currentUser)return;currentUser.name=document.getElementById('profNama').value;currentUser.bio=document.getElementById('profBio').value;currentUser.prov=document.getElementById('profLoc').value;currentUser.skills=document.getElementById('profSkill').value.split(',').map(x=>x.trim()).filter(Boolean);renderAuthArea();Swal.fire({icon:'success',title:'Profil diperbarui',timer:1200,showConfirmButton:false});}
+function openMyCard(){const u=currentUser||{name:'Tamu Nusantara',id:'KN-0000',prov:'-',since:'2026'};Swal.fire({title:'Kartu Anggota Digital',html:`<div class="digicard" style="margin:auto;text-align:left"><b>${u.name}</b><div style="font-size:.75rem;margin-top:4px">${u.prov}</div><div class="mono" style="margin-top:25px">${u.id}</div><div style="font-size:.65rem;margin-top:8px">Anggota Sejak ${u.since||'2026'}</div></div>`,confirmButtonText:'Tutup',confirmButtonColor:'#152A52'});}

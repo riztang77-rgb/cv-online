@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login — RIZZ STORE</title>
+
+    <link rel="stylesheet" href="login_ecom.css">
+</head>
+
+<body>
+
+    <div class="login-bg">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="brand">
+                <h1>RIZZ <span>STORE</span></h1>
+                <p>Belanja mudah. Gaya tanpa batas.</p>
+            </div>
+
+            <div class="login-heading">
+                <span class="welcome">SELAMAT DATANG</span>
+                <h2>Masuk ke akunmu</h2>
+                <p>Gunakan Gmail dan password untuk melanjutkan.</p>
+            </div>
+
+            <form id="loginForm">
+
+                <!-- GMAIL -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Gmail
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="nama@gmail.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <small id="emailError"></small>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            id="togglePassword"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                    <small id="passwordError"></small>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label class="remember">
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <span>Ingat saya</span>
+                    </label>
+
+                    <button
+                        type="button"
+                        class="forgot"
+                        id="forgotPassword"
+                    >
+                        Lupa password?
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+                    <span>MASUK KE RIZZ STORE</span>
+                    <span class="arrow">→</span>
+                </button>
+
+
+                <div
+                    class="login-message"
+                    id="loginMessage"
+                ></div>
+
+            </form>
+
+
+            <div class="divider">
+                <span>atau</span>
+            </div>
+
+
+            <!-- TAMPILAN GOOGLE -->
+            <button
+                type="button"
+                class="google-button"
+                id="googleButton"
+            >
+
+                <span class="google-icon">
+                    G
+                </span>
+
+                <span>
+                    Masuk dengan Google
+                </span>
+
+            </button>
+
+
+            <p class="register-text">
+                Belum punya akun?
+                <button
+                    type="button"
+                    id="registerButton"
+                >
+                    Daftar sekarang
+                </button>
+            </p>
+
+
+            <div class="security">
+
+                <span>🔐</span>
+
+                <p>
+                    Data login kamu diproses secara lokal
+                    pada versi demo ini.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer class="login-footer">
+            © 2026 RIZZ STORE — Semua hak dilindungi.
+        </footer>
+
+    </main>
+
+
+    <script src="login_ecom.js"></script>
+
+</body>
+</html>

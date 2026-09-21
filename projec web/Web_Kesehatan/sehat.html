@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit ANAVERSE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="sehat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md shadow-blue-500/20">
+                    <i class="fa-solid font-bold">+</i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-slate-400 block -mb-1">RUMAH SAKIT</span>
+                    <span class="text-xl font-extrabold text-blue-900">INDAH</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#tentang-kami" class="hover:text-blue-600 transition">Tentang Kami</a>
+                <a href="#layanan" class="hover:text-blue-600 transition">Layanan</a>
+                <a href="#dokter" class="hover:text-blue-600 transition">Dokter</a>
+                <a href="#fasilitas" class="hover:text-blue-600 transition">Fasilitas</a>
+                <a href="#berita" class="hover:text-blue-600 transition">Berita</a>
+                <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+            </nav>
+
+            <a href="#kontak" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow-lg shadow-blue-600/20 transition flex items-center gap-2">
+                <i class="fa-regular fa-calendar-check"></i> Daftar Online
+            </a>
+        </div>
+    </header>
+
+    <section id="beranda" class="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50/30 pt-12 pb-20 overflow-hidden scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-100/80 text-blue-700 rounded-full text-xs font-semibold mb-6">
+                    <i class="fa-regular fa-heart"></i> Kesehatan Anda, Prioritas Kami
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Pelayanan Terbaik untuk <span class="text-blue-600">Kesehatan Anda</span> dan Keluarga
+                </h1>
+                <p class="text-slate-600 leading-relaxed mb-8 text-base">
+                    Kami hadir dengan layanan medis berkualitas, dokter berpengalaman, dan fasilitas modern untuk memberikan perawatan terbaik.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#layanan" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow-lg shadow-blue-600/20 transition flex items-center gap-2">
+                        Lihat Layanan <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#kontak" class="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 px-6 py-3 rounded-xl font-semibold text-sm transition flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-alt text-blue-600"></i> Buat Janji Temu
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="img/Beranda.jpg" alt="Pelayanan Rumah Sakit ANAVERSE" class="w-full h-[450px] object-cover">
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 -mb-32 mt-12 relative z-10">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="text-left">
+                        <p class="text-2xl font-bold text-slate-900">15+</p>
+                        <p class="text-xs text-slate-500 font-medium">Dokter Spesialis</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4 border-l border-slate-100">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-users"></i></div>
+                    <div class="text-left">
+                        <p class="text-2xl font-bold text-slate-900">25.000+</p>
+                        <p class="text-xs text-slate-500 font-medium">Pasien Terlayani</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4 border-l border-slate-100">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-bed"></i></div>
+                    <div class="text-left">
+                        <p class="text-2xl font-bold text-slate-900">120+</p>
+                        <p class="text-xs text-slate-500 font-medium">Kamar Perawatan</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4 border-l border-slate-100">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-star"></i></div>
+                    <div class="text-left">
+                        <p class="text-2xl font-bold text-slate-900">98%</p>
+                        <p class="text-xs text-slate-500 font-medium">Kepuasan Pasien</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang-kami" class="pt-40 pb-20 bg-white scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+                <img src="img/Pelayanan.jpg" alt="Tentang Rumah Sakit ANAVERSE" class="w-full h-[380px] object-cover">
+            </div>
+            <div>
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full uppercase tracking-wider">Tentang Kami</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-4 mb-4">
+                    Rumah Sakit <span class="text-blue-600">Indah</span><br>Untuk Hidup yang Lebih Sehat
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    Rumah Sakit Anaverse berkomitmen memberikan pelayanan kesehatan profesional dengan teknologi modern dan lingkungan yang nyaman bagi pasien.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-clock-rotate-left text-blue-600 text-xl mb-2 block"></i>
+                        <h4 class="font-bold text-sm text-slate-900">Pelayanan 24 Jam</h4>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-user-nurse text-blue-600 text-xl mb-2 block"></i>
+                        <h4 class="font-bold text-sm text-slate-900">Tenaga Medis Profesional</h4>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-microscope text-blue-600 text-xl mb-2 block"></i>
+                        <h4 class="font-bold text-sm text-slate-900">Fasilitas Modern</h4>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-hand-holding-medical text-blue-600 text-xl mb-2 block"></i>
+                        <h4 class="font-bold text-sm text-slate-900">Perawatan Berkualitas</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-20 bg-slate-50 scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900">Layanan Kami</h2>
+                </div>
+                <a href="#layanan" class="text-blue-600 text-sm font-semibold hover:underline flex items-center gap-1">
+                    Lihat Semua Layanan <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 group text-center pb-4">
+                    <img src="img/Dokter 1.jpg" alt="Poli Spesialis" class="w-full h-32 object-cover mb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Poli Spesialis</h3>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 group text-center pb-4">
+                    <img src="img/Rawat Inap.jpg" alt="Rawat Inap" class="w-full h-32 object-cover mb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Rawat Inap</h3>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 group text-center pb-4">
+                    <img src="img/Ruang IGD.jpg" alt="IGD 24 Jam" class="w-full h-32 object-cover mb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">IGD 24 Jam</h3>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 group text-center pb-4">
+                    <img src="img/Radiologi.jpg" alt="Radiologi" class="w-full h-32 object-cover mb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Radiologi</h3>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 group text-center pb-4">
+                    <img src="img/Laboratorium.jpg" alt="Laboratorium" class="w-full h-32 object-cover mb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Laboratorium</h3>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 group text-center pb-4">
+                    <img src="img/Farmasi.jpg" alt="Farmasi" class="w-full h-32 object-cover mb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Farmasi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dokter" class="py-20 bg-white scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full uppercase tracking-wider">Dokter Kami</span>
+                <h2 class="text-2xl font-extrabold text-slate-900 mt-3">Dokter Spesialis Berpengalaman</h2>
+                <p class="text-slate-500 text-sm mt-1">Tim dokter kami siap memberikan perawatan terbaik untuk Anda dan keluarga.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-center">
+                    <img src="img/Dokter 1.jpg" alt="dr. Andika Pratama" class="w-full h-56 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-slate-900 text-base">dr. Salsabila Putri</h3>
+                    <p class="text-xs text-slate-500 mb-2">Spesialis Jantung</p>
+                    <div class="flex items-center justify-center gap-1 text-amber-400 text-xs font-bold">
+                        <i class="fa-solid fa-star"></i> 4.9 
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-center">
+                    <img src="img/Dokter 2.jpg" alt="dr. Salsabila Putri" class="w-full h-56 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-slate-900 text-base">dr. Andika Pratama</h3>
+                    <p class="text-xs text-slate-500 mb-2">Spesialis Anak</p>
+                    <div class="flex items-center justify-center gap-1 text-amber-400 text-xs font-bold">
+                        <i class="fa-solid fa-star"></i> 4.9
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-center">
+                    <img src="img/Dokter 3.jpg" alt="dr. Budi Santoso" class="w-full h-56 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-slate-900 text-base">dr. Meilani Putri</h3>
+                    <p class="text-xs text-slate-500 mb-2">Spesialis Bedah</p>
+                    <div class="flex items-center justify-center gap-1 text-amber-400 text-xs font-bold">
+                        <i class="fa-solid fa-star"></i> 4.8 
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-center">
+                    <img src="img/Dokter 4.jpg" alt="dr. Meilani Putri" class="w-full h-56 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-slate-900 text-base">dr. Budi Santoso</h3>
+                    <p class="text-xs text-slate-500 mb-2">Spesialis Penyakit Dalam</p>
+                    <div class="flex items-center justify-center gap-1 text-amber-400 text-xs font-bold">
+                        <i class="fa-solid fa-star"></i> 4.9
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="#dokter" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition">
+                    Lihat Semua Dokter <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="fasilitas" class="py-20 bg-slate-900 text-white scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <h2 class="text-2xl font-extrabold">Fasilitas Modern untuk Perawatan Terbaik</h2>
+                <p class="text-slate-400 text-sm mt-1">Lingkungan nyaman dan peralatan canggih untuk mendukung kesembuhan pasien.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img/Ruang Operasi Hibrida.jpg" alt="Ruang ICU" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3">
+                        <span class="text-xs font-bold text-white">Ruang ICU</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img/Kamar Rawat Inap VVIP.jpg" alt="Kamar VIP" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3">
+                        <span class="text-xs font-bold text-white">Kamar VIP</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img/Ruang Operasi Hibrida.jpg" alt="Ruang Operasi" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3">
+                        <span class="text-xs font-bold text-white">Ruang Operasi</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img/Laboratorium.jpg" alt="Laboratorium" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3">
+                        <span class="text-xs font-bold text-white">Laboratorium</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden group col-span-2 md:col-span-1">
+                    <img src="img/Ambulans Advance 24.jpg" alt="Ambulans 24 Jam" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3">
+                        <span class="text-xs font-bold text-white">Ambulans 24 Jam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="berita" class="py-20 bg-slate-50 scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-10">
+                <h2 class="text-2xl font-extrabold text-slate-900">Berita & Tips Kesehatan</h2>
+                <a href="#berita" class="text-blue-600 text-sm font-semibold hover:underline flex items-center gap-1">
+                    Lihat Semua Berita <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <img src="img/Tips Menjaga Kesehatan Jantung Setiap Hari.jpg" alt="Tips Menjaga Kesehatan Jantung Setiap Hari" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Kesehatan Jantung</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-2 leading-snug">Tips Menjaga Kesehatan Jantung Setiap Hari</h3>
+                        </div>
+                    </div>
+                    <p class="px-4 pb-4 text-xs text-slate-400">20 Mei 2026</p>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <img src="img/Pentingnya Imunisasi untuk Anak Sejak Dini.jpg" alt="Pentingnya Imunisasi untuk Anak Sejak Dini" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Anak</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-2 leading-snug">Pentingnya Imunisasi untuk Anak Sejak Dini</h3>
+                        </div>
+                    </div>
+                    <p class="px-4 pb-4 text-xs text-slate-400">18 Mei 2026</p>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <img src="img/Makanan Sehat untuk Gaya Hidup Seimbang.jpg" alt="Makanan Sehat untuk Gaya Hidup Seimbang" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Gaya Hidup</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-2 leading-snug">Makanan Sehat untuk Gaya Hidup Seimbang</h3>
+                        </div>
+                    </div>
+                    <p class="px-4 pb-4 text-xs text-slate-400">16 Mei 2026</p>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <img src="img/Pelayanan.jpg" alt="Perawatan Terbaik untuk Orang Tersayang" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Lansia</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-2 leading-snug">Perawatan Terbaik untuk Orang Tersayang</h3>
+                        </div>
+                    </div>
+                    <p class="px-4 pb-4 text-xs text-slate-400">14 Mei 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-12 bg-white scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-2">Butuh Bantuan Medis?</h2>
+                    <p class="text-blue-200 text-sm">Kami siap melayani Anda 24 jam sehari, 7 hari seminggu.</p>
+                    <div class="flex flex-wrap gap-4 mt-6 text-xs text-blue-100">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock"></i> IGD 24 Jam</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-doctor"></i> Tenaga Medis Profesional</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-building"></i> Fasilitas Lengkap</span>
+                    </div>
+                </div>
+
+                <div class="bg-white text-slate-900 p-6 rounded-2xl text-center w-full md:w-auto min-w-[280px] shadow-lg">
+                    <p class="text-xs font-semibold text-slate-500 mb-1">Hubungi Kami</p>
+                    <p class="text-2xl font-black text-blue-600 mb-4">(021) 1234 5678</p>
+                    <a href="#" class="block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3 px-6 rounded-xl transition">
+                        Atau Buat Janji Temu Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 py-12 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-2 text-white font-extrabold text-lg mb-4">
+                    <i class="fa-solid fa-hospital text-blue-500"></i>
+                    <span>INDAH</span>
+                </div>
+                <p class="leading-relaxed">Memberikan pelayanan kesehatan terbaik dengan standar internasional dan fasilitas terlengkap.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-3">Navigasi</h5>
+                <ul class="space-y-2">
+                    <li><a href="#beranda" class="hover:text-blue-400 transition">Beranda</a></li>
+                    <li><a href="#tentang-kami" class="hover:text-blue-400 transition">Tentang Kami</a></li>
+                    <li><a href="#layanan" class="hover:text-blue-400 transition">Layanan Medis</a></li>
+                    <li><a href="#dokter" class="hover:text-blue-400 transition">Jadwal Dokter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-3">Layanan Utama</h5>
+                <ul class="space-y-2">
+                    <li><a href="#layanan" class="hover:text-blue-400 transition">Instalasi Gawat Darurat (IGD)</a></li>
+                    <li><a href="#layanan" class="hover:text-blue-400 transition">Poliklinik Spesialis</a></li>
+                    <li><a href="#layanan" class="hover:text-blue-400 transition">Rawat Inap VVIP & VIP</a></li>
+                    <li><a href="#layanan" class="hover:text-blue-400 transition">Laboratorium & Radiologi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-3">Ikuti Kami</h5>
+                <div class="flex space-x-3 text-lg">
+                    <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-8 border-t border-slate-900">
+            <p>&copy; 2026 Rumah Sakit INDAH. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="sehat.js"></script>
+</body>
+</html>

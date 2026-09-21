@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Keranjang - RasaNusa</title><link rel="stylesheet" href="../assets/css/style.css"></head>
+<body><header class="navbar"><a class="logo" href="../index.html">🍽️ RasaNusa</a><nav><a href="../index.html">Home</a><a href="menu.html">Menu</a><a href="promo.html">Promo</a><a href="galeri.html">Galeri</a><a href="tentang.html">Tentang</a><a href="kontak.html">Kontak</a><a class="cart" href="keranjang.html">🛒 Keranjang</a></nav></header>
+<main class="page"><p class="eyebrow">RASANUSA RESTAURANT</p><h1>Keranjang Pesanan</h1><p class="page-intro">Periksa pesanan sebelum melanjutkan ke checkout.</p><div id="cartArea"></div><script>
+const cart=JSON.parse(sessionStorage.getItem("cart")||"[]");
+const area=document.getElementById("cartArea");
+if(!cart.length){area.innerHTML='<div class="empty">Keranjang masih kosong.<br><br><a class="btn primary" href="menu.html">Pilih Menu</a></div>'}
+else{let subtotal=0;let rows=cart.map((i,n)=>{subtotal+=i.price*i.qty;return `<tr><td>${i.name}</td><td>${i.qty}</td><td>Rp ${(i.price*i.qty).toLocaleString("id-ID")}</td></tr>`}).join("");
+area.innerHTML=`<table class="table"><tr><th>Menu</th><th>Jumlah</th><th>Harga</th></tr>${rows}<tr><th colspan="2">Subtotal</th><th>Rp ${subtotal.toLocaleString("id-ID")}</th></tr><tr><th colspan="2">Biaya layanan</th><th>Rp 2.000</th></tr><tr><th colspan="2">Total</th><th>Rp ${(subtotal+2000).toLocaleString("id-ID")}</th></tr></table><br><a class="btn primary" href="checkout.html">Lanjut Checkout</a>`}
+</script></main>
+<footer><b>RasaNusa Restaurant</b><span>© 2026</span></footer><script src="../assets/js/app.js"></script></body></html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NEXORA Future Event — website acara modern HTML CSS JavaScript">
+<title>NEXORA — Future Event</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast"></div>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <nav id="nav">
+    <a href="#about">Tentang</a><a href="#speakers">Speaker</a><a href="#schedule">Rundown</a>
+    <a href="#register">Daftar</a><a href="#gallery">Galeri</a><a href="#certificate">Sertifikat</a>
+  </nav>
+  <div class="actions"><button id="themeBtn" class="icon-btn" title="Ganti tema">🌙</button><button id="menuBtn" class="icon-btn menu-btn">☰</button></div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow"><span class="live-dot"></span> 18 NOVEMBER 2026 • JAKARTA</div>
+    <h1>Build the <span>Future.</span><br>Shape Tomorrow.</h1>
+    <p class="hero-copy">Festival teknologi, kreativitas, dan inovasi untuk generasi yang siap menciptakan masa depan.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#register">Daftar Sekarang <span>↗</span></a><a class="btn ghost" href="#about">Jelajahi Acara</a></div>
+    <div class="countdown">
+      <div><b id="days">00</b><small>Hari</small></div><i>:</i><div><b id="hours">00</b><small>Jam</small></div><i>:</i><div><b id="minutes">00</b><small>Menit</small></div><i>:</i><div><b id="seconds">00</b><small>Detik</small></div>
+    </div>
+  </div>
+  <div class="hero-card reveal">
+    <div class="orbit"><div class="orbit-ring"></div><div class="orbit-core">NX</div><span class="orbit-dot d1"></span><span class="orbit-dot d2"></span><span class="orbit-dot d3"></span></div>
+    <p>ONE DAY • LIMITLESS IDEAS</p><strong>Technology · Design · Future</strong>
+  </div>
+</section>
+
+<section id="about" class="section">
+ <div class="section-head reveal"><div><span class="kicker">01 / ABOUT</span><h2>Lebih dari sekadar<br><span>sebuah acara.</span></h2></div><p>NEXORA mempertemukan pelajar, kreator, developer, dan pemimpin industri dalam satu ruang untuk belajar, berbagi, dan membangun koneksi.</p></div>
+ <div class="feature-grid">
+   <article class="feature reveal"><span>01</span><div class="feature-icon">⚡</div><h3>Learn</h3><p>Insight praktis dari pembicara berpengalaman.</p></article>
+   <article class="feature reveal"><span>02</span><div class="feature-icon">◈</div><h3>Connect</h3><p>Bangun koneksi baru dengan komunitas dan talenta digital.</p></article>
+   <article class="feature reveal"><span>03</span><div class="feature-icon">✦</div><h3>Create</h3><p>Ubah ide menjadi karya dan solusi nyata.</p></article>
+ </div>
+</section>
+
+<section id="speakers" class="section alt">
+ <div class="section-head reveal"><div><span class="kicker">02 / SPEAKERS</span><h2>Meet the<br><span>visionaries.</span></h2></div><p>Orang-orang yang membangun, memimpin, dan terus mendorong batas teknologi.</p></div>
+ <div id="speakerGrid" class="speaker-grid"></div>
+</section>
+
+<section id="schedule" class="section">
+ <div class="section-head reveal"><div><span class="kicker">03 / SCHEDULE</span><h2>Satu hari.<br><span>Banyak kemungkinan.</span></h2></div><p>Rundown dirancang agar kamu mendapatkan pengalaman maksimal dari pagi sampai malam.</p></div>
+ <div class="schedule-tools"><div class="search"><span>⌕</span><input id="scheduleSearch" placeholder="Cari kegiatan, speaker, ruangan..."></div><select id="scheduleFilter"><option value="all">Semua sesi</option><option value="main">Main Stage</option><option value="workshop">Workshop</option><option value="network">Networking</option></select></div>
+ <div id="scheduleList" class="schedule-list"></div>
+</section>
+
+<section id="register" class="section alt">
+ <div class="section-head reveal"><div><span class="kicker">04 / REGISTER</span><h2>Secure your<br><span>spot.</span></h2></div><p>Isi data di bawah. Data pendaftaran disimpan secara lokal di browser perangkatmu.</p></div>
+ <div class="register-layout">
+  <form id="registerForm" class="panel reveal">
+   <div class="panel-title"><span>FORM PENDAFTARAN</span><em>FREE</em></div>
+   <div class="form-grid">
+    <label>Nama Lengkap<input name="name" required placeholder="Nama kamu"></label>
+    <label>Email<input name="email" type="email" required placeholder="nama@email.com"></label>
+    <label>No. HP<input name="phone" required placeholder="08xxxxxxxxxx"></label>
+    <label>Asal Sekolah / Instansi<input name="institution" required placeholder="Nama sekolah / instansi"></label>
+    <label class="full">Jenis Tiket<select name="ticket"><option>General Admission — Gratis</option><option>VIP Access — Rp150.000</option><option>Workshop Pass — Rp250.000</option></select></label>
+    <label class="full">Catatan<textarea name="note" rows="3" placeholder="Pesan atau kebutuhan khusus (opsional)"></textarea></label>
+   </div>
+   <button class="btn primary full" type="submit">Daftar & Buat Tiket Digital ↗</button>
+  </form>
+  <div class="ticket-preview reveal"><span class="kicker">YOUR EXPERIENCE</span><h3>Semua kebutuhan acara<br>di satu tempat.</h3><ul><li>🎫 Tiket digital otomatis</li><li>▣ QR untuk check-in</li><li>◷ Sertifikat setelah hadir</li><li>★ Feedback & dokumentasi</li></ul></div>
+ </div>
+</section>
+
+<section id="digitalTicket" class="section ticket-section" hidden>
+ <div class="section-head"><div><span class="kicker">05 / DIGITAL TICKET</span><h2>Your <span>pass.</span></h2></div><p>Simpan ID peserta dan gunakan QR saat check-in.</p></div>
+ <div id="ticketCard" class="digital-ticket"></div>
+</section>
+
+<section id="payment" class="section alt" hidden>
+ <div class="section-head"><div><span class="kicker">06 / PAYMENT</span><h2>Payment<br><span>center.</span></h2></div><p>Untuk tiket berbayar, upload bukti pembayaran di sini.</p></div>
+ <form id="paymentForm" class="panel payment-panel">
+  <div class="payment-methods"><button type="button" data-method="QRIS" class="method active">▦ <b>QRIS</b><small>Scan & bayar</small></button><button type="button" data-method="Transfer Bank" class="method">₿ <b>Transfer</b><small>Bank transfer</small></button><button type="button" data-method="E-Wallet" class="method">◉ <b>E-Wallet</b><small>GoPay / OVO</small></button></div>
+  <label>Bukti Pembayaran<input id="proof" type="file" accept="image/*,.pdf" required></label>
+  <button class="btn primary" type="submit">Kirim Bukti Pembayaran</button><p id="paymentStatus" class="muted"></p>
+ </form>
+</section>
+
+<section id="checkin" class="section" hidden>
+ <div class="section-head"><div><span class="kicker">07 / EVENT DAY</span><h2>Check-in<br><span>center.</span></h2></div><p>Gunakan ID peserta untuk simulasi verifikasi dan absensi.</p></div>
+ <div class="checkin-box panel"><div class="qr-big" id="checkQr">QR</div><div><label>ID Peserta<input id="checkinId" placeholder="NX-2026-XXXX"></label><button class="btn primary" id="checkinBtn">Verifikasi & Check-in</button><p id="checkinResult" class="muted"></p></div></div>
+</section>
+
+<section id="gallery" class="section alt">
+ <div class="section-head reveal"><div><span class="kicker">08 / GALLERY</span><h2>Moments that<br><span>stay.</span></h2></div><p>Dokumentasi suasana NEXORA.</p></div>
+ <div class="gallery-grid">
+  <div class="gallery g1"><span>MAIN STAGE</span></div><div class="gallery g2"><span>WORKSHOP</span></div><div class="gallery g3"><span>NETWORKING</span></div><div class="gallery g4"><span>COMMUNITY</span></div><div class="gallery g5"><span>IDEA LAB</span></div>
+ </div>
+</section>
+
+<section id="feedback" class="section">
+ <div class="section-head reveal"><div><span class="kicker">09 / FEEDBACK</span><h2>Tell us what<br><span>you think.</span></h2></div><p>Feedback kamu membantu kami membuat acara berikutnya lebih baik.</p></div>
+ <form id="feedbackForm" class="panel feedback-form"><div class="stars" id="stars"><button type="button" data-star="1">★</button><button type="button" data-star="2">★</button><button type="button" data-star="3">★</button><button type="button" data-star="4">★</button><button type="button" data-star="5">★</button></div><textarea name="feedback" required rows="5" placeholder="Ceritakan pengalamanmu..."></textarea><button class="btn primary">Kirim Feedback</button></form>
+</section>
+
+<section id="certificate" class="section alt">
+ <div class="section-head reveal"><div><span class="kicker">10 / CERTIFICATE</span><h2>Get your<br><span>certificate.</span></h2></div><p>Sertifikat dapat dibuat setelah status kehadiranmu terverifikasi.</p></div>
+ <div class="certificate-box panel"><div class="cert-icon">✦</div><div><h3>Sertifikat NEXORA 2026</h3><p id="certText">Daftar dan lakukan check-in untuk mengaktifkan sertifikat.</p></div><button id="certBtn" class="btn ghost" disabled>Download Sertifikat</button></div>
+</section>
+
+<section id="admin" class="section admin-section">
+ <div class="section-head"><div><span class="kicker">ADMIN / DASHBOARD</span><h2>Event<br><span>control.</span></h2></div><p>Dashboard lokal untuk mengelola data peserta, speaker, dan rundown.</p></div>
+ <div class="stats"><div class="stat"><small>TOTAL PESERTA</small><b id="statParticipants">0</b><span>↑ live local data</span></div><div class="stat"><small>CHECK-IN</small><b id="statCheckin">0</b><span>verified</span></div><div class="stat"><small>RATING</small><b id="statRating">—</b><span>feedback</span></div><div class="stat"><small>PENDAPATAN</small><b id="statRevenue">Rp0</b><span>estimasi</span></div></div>
+ <div class="admin-grid"><div class="panel"><div class="panel-title"><span>PARTICIPANTS</span><div><button id="exportCsv" class="mini-btn">CSV ↓</button><button id="clearData" class="mini-btn danger">Reset</button></div></div><div class="search"><span>⌕</span><input id="participantSearch" placeholder="Cari peserta..."></div><div class="table-wrap"><table><thead><tr><th>Nama</th><th>Institusi</th><th>Tiket</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="participantTable"></tbody></table></div><div id="pagination" class="pagination"></div></div>
+ <div class="panel"><div class="panel-title"><span>QUICK ACTIONS</span></div><button class="quick" id="addDemo">＋ Tambah peserta demo <span>→</span></button><button class="quick" id="scrollRegister">＋ Buka form pendaftaran <span>→</span></button><button class="quick" id="markAll">✓ Simulasi check-in semua <span>→</span></button></div></div>
+</section>
+</main>
+
+<footer><div class="brand"><span class="brand-mark">N</span><span>NEXORA</span></div><p>© 2026 NEXORA Future Event. Built for tomorrow.</p><div><a href="#home">Back to top ↑</a></div></footer>
+<script src="data.js"></script><script src="script.js"></script>
+</body></html>

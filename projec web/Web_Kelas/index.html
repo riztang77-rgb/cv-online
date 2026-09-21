@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komunitas Nusantara — Jejaring Anggota Seluruh Indonesia</title>
+
+<!-- ===== CSS LIBRARIES (CDN) ===== -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader-nc" id="loader">
+  <div class="loader-ring"></div>
+  <div class="mono" style="font-size:.8rem; color:var(--text-mut);">Memuat Komunitas Nusantara…</div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar-nc">
+  <div class="container-nc">
+    <div class="brand" onclick="showPage('beranda')" style="cursor:pointer;">
+      <span class="mark"><i class="fa-solid fa-diagram-project"></i></span>
+      Komunitas <span style="color:var(--accent)">Nusantara</span>
+    </div>
+    <div class="nc-links mono" id="navLinks">
+      <a href="#" onclick="showPage('beranda');return false;" data-page="beranda">Beranda</a>
+      <a href="#" onclick="showPage('anggota');return false;" data-page="anggota">Anggota</a>
+      <a href="#" onclick="showPage('wilayah');return false;" data-page="wilayah">Wilayah</a>
+      <a href="#" onclick="showPage('forum');return false;" data-page="forum">Forum</a>
+      <a href="#" onclick="showPage('berita');return false;" data-page="berita">Berita</a>
+      <a href="#" onclick="showPage('event');return false;" data-page="event">Event</a>
+      <a href="#" onclick="showPage('prestasi');return false;" data-page="prestasi">Prestasi</a>
+      <a href="#" onclick="showPage('galeri');return false;" data-page="galeri">Galeri</a>
+      <a href="#" onclick="showPage('struktur');return false;" data-page="struktur">Struktur</a>
+      <a href="#" onclick="showPage('dokumen');return false;" data-page="dokumen">Dokumen</a>
+      <a href="#" onclick="showPage('kontak');return false;" data-page="kontak">Kontak</a>
+    </div>
+    <div class="nc-actions">
+      <div style="position:relative;">
+        <button class="icon-btn" onclick="toggleDropdown('notifPanel')"><i class="fa-regular fa-bell"></i><span class="badge-dot" id="notifCount">3</span></button>
+        <div class="dropdown-panel" id="notifPanel">
+          <div style="font-weight:700; padding:6px 10px; font-size:.85rem;">Notifikasi</div>
+          <div id="notifList"></div>
+        </div>
+      </div>
+      <button class="icon-btn" onclick="toggleTheme()" id="themeBtn"><i class="fa-solid fa-moon"></i></button>
+      <div id="authArea"></div>
+      <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('mobileShow')"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= BERANDA ================= -->
+<section class="page active" id="page-beranda">
+  <div class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="container-nc hero-grid">
+      <div data-aos="fade-right">
+        <div class="eyebrow">Jaringan 38 Provinsi</div>
+        <h1>Merajut <em class="grad-text">Nusantara</em><br>dalam Satu Komunitas Digital</h1>
+        <p class="lead">Tempat berkumpulnya anggota dari Sabang sampai Merauke — berbagi ide, kegiatan, prestasi, dan cerita lintas daerah dalam satu ruang yang hangat.</p>
+        <div class="hero-cta">
+          <button class="btn-nc btn-accent-nc" onclick="showPage('forum')"><i class="fa-solid fa-comments"></i> Masuk ke Forum</button>
+          <button class="btn-nc btn-ghost-nc" onclick="openRegister()"><i class="fa-regular fa-id-card"></i> Gabung Sekarang</button>
+        </div>
+        <div class="stat-row">
+          <div class="stat-item"><div class="num" id="statAnggota">0</div><div class="lbl">Anggota Terdaftar</div></div>
+          <div class="stat-item"><div class="num" id="statProvinsi">0</div><div class="lbl">Provinsi Aktif</div></div>
+          <div class="stat-item"><div class="num" id="statEvent">0</div><div class="lbl">Kegiatan Tahun Ini</div></div>
+          <div class="stat-item"><div class="num" id="statPost">0</div><div class="lbl">Diskusi Forum</div></div>
+        </div>
+      </div>
+      <div class="hero-map-wrap" data-aos="fade-left">
+        <div id="hero-network"><svg id="networkSvg" viewBox="0 0 400 420"></svg></div>
+        <div class="hero-float-card">
+          <div class="ico"><i class="fa-solid fa-bolt"></i></div>
+          <div>
+            <div style="font-weight:700; font-size:.85rem;">Live Aktivitas</div>
+            <div style="font-size:.72rem; color:var(--text-mut);" id="liveActivity">Menyiapkan data…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Sorotan</div>
+      <h2 class="section-title" data-aos="fade-up">Berita & Artikel Terbaru</h2>
+      <p class="section-sub" data-aos="fade-up">Kabar terkini dari seluruh jaringan wilayah komunitas.</p>
+      <div class="swiper newsSwiper" data-aos="fade-up">
+        <div class="swiper-wrapper" id="newsSliderWrap"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Agenda</div>
+      <h2 class="section-title" data-aos="fade-up">Event Mendatang</h2>
+      <div class="row g-4" id="homeEventGrid"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Statistik Nasional</div>
+      <h2 class="section-title" data-aos="fade-up">Sebaran Anggota per Pulau</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right"><canvas id="chartPulau" height="260"></canvas></div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <p class="section-sub">Jawa masih menjadi basis anggota terbesar, namun pertumbuhan tercepat justru datang dari wilayah timur Indonesia — menandakan jejaring komunitas yang makin merata.</p>
+          <div id="pulauLegend"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ANGGOTA ================= -->
+<section class="page" id="page-anggota">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Direktori</div>
+      <h2 class="section-title" data-aos="fade-up">Anggota Komunitas</h2>
+      <p class="section-sub" data-aos="fade-up">Temukan dan terhubung dengan anggota dari berbagai provinsi dan bidang keahlian.</p>
+      <div class="filter-bar">
+        <input type="text" id="memberSearch" placeholder="🔍 Cari nama atau ID anggota…" oninput="renderMembers()">
+        <select id="memberProvFilter" onchange="renderMembers()"><option value="">Semua Provinsi</option></select>
+        <select id="memberSkillFilter" onchange="renderMembers()"><option value="">Semua Keahlian</option></select>
+        <button class="btn-nc btn-gold-nc" onclick="openMyCard()"><i class="fa-solid fa-id-badge"></i> Kartu Anggota Saya</button>
+      </div>
+      <div class="row g-4" id="memberGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WILAYAH ================= -->
+<section class="page" id="page-wilayah">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Peta Persebaran</div>
+      <h2 class="section-title" data-aos="fade-up">Wilayah Nasional — 38 Provinsi</h2>
+      <p class="section-sub" data-aos="fade-up">Klik marker atau daftar wilayah untuk melihat koordinator, cabang, dan kegiatan daerah.</p>
+      <div class="filter-bar">
+        <input type="text" id="provSearch" placeholder="🔍 Cari provinsi / kota…" oninput="renderProvList()">
+      </div>
+      <div class="map-wrap" data-aos="fade-up">
+        <div id="peta-indonesia"></div>
+        <div class="prov-list" id="provList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORUM ================= -->
+<section class="page" id="page-forum">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Diskusi</div>
+      <h2 class="section-title" data-aos="fade-up">Forum Komunitas</h2>
+      <p class="section-sub" data-aos="fade-up">Bertukar ide, sebut rekan dengan @username, gunakan #tagar, atau buat polling.</p>
+
+      <div class="new-post-box" data-aos="fade-up">
+        <textarea id="newPostText" placeholder="Apa yang ingin kamu bagikan hari ini? Gunakan @nama atau #topik…"></textarea>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+          <select id="newPostCat" style="border:1px solid var(--line); border-radius:8px; padding:6px 10px; font-size:.78rem; background:var(--bg-soft); color:var(--text);">
+            <option>Umum</option><option>Teknologi</option><option>Event</option><option>Prestasi</option><option>Wilayah</option>
+          </select>
+          <button class="btn-nc btn-accent-nc" onclick="submitPost()"><i class="fa-solid fa-paper-plane"></i> Posting</button>
+        </div>
+      </div>
+
+      <div class="filter-bar" data-aos="fade-up">
+        <input type="text" id="forumSearch" placeholder="🔍 Cari postingan…" oninput="renderForum()">
+        <div id="forumCatChips" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+      </div>
+
+      <div id="forumFeed" data-aos="fade-up"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BERITA ================= -->
+<section class="page" id="page-berita">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Media</div>
+      <h2 class="section-title" data-aos="fade-up">Berita & Artikel</h2>
+      <p class="section-sub" data-aos="fade-up">Pengumuman resmi, artikel, dan prestasi anggota dari seluruh nusantara.</p>
+      <div class="filter-bar">
+        <input type="text" id="newsSearch" placeholder="🔍 Cari berita…" oninput="renderNews()">
+        <div id="newsCatChips" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+      </div>
+      <div class="row g-4" id="newsGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVENT ================= -->
+<section class="page" id="page-event">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Agenda</div>
+      <h2 class="section-title" data-aos="fade-up">Event & Kegiatan</h2>
+      <p class="section-sub" data-aos="fade-up">Kalender kegiatan nasional — pantau kuota, lokasi, dan hitung mundur setiap acara.</p>
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-5">
+          <div class="dow" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:8px;">
+            <div class="dow">Min</div><div class="dow">Sen</div><div class="dow">Sel</div><div class="dow">Rab</div><div class="dow">Kam</div><div class="dow">Jum</div><div class="dow">Sab</div>
+          </div>
+          <div class="calendar-grid" id="eventCalendar"></div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-3" id="eventGrid"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESTASI ================= -->
+<section class="page" id="page-prestasi">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Apresiasi</div>
+      <h2 class="section-title" data-aos="fade-up">Prestasi Anggota</h2>
+      <p class="section-sub" data-aos="fade-up">Capaian membanggakan dari anggota komunitas di berbagai bidang.</p>
+      <div class="row g-4" id="prestasiGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERI ================= -->
+<section class="page" id="page-galeri">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Dokumentasi</div>
+      <h2 class="section-title" data-aos="fade-up">Galeri Foto & Video</h2>
+      <p class="section-sub" data-aos="fade-up">Album kegiatan dari berbagai daerah, klik gambar untuk memperbesar.</p>
+      <div class="filter-bar" id="galeriFilterBar"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STRUKTUR ================= -->
+<section class="page" id="page-struktur">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Kepengurusan</div>
+      <h2 class="section-title" data-aos="fade-up">Struktur Organisasi</h2>
+      <p class="section-sub" data-aos="fade-up">Susunan pengurus pusat dan koordinator wilayah komunitas.</p>
+      <div class="org-tree" id="orgTree" data-aos="fade-up"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOKUMEN ================= -->
+<section class="page" id="page-dokumen">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Arsip</div>
+      <h2 class="section-title" data-aos="fade-up">Dokumen Resmi</h2>
+      <p class="section-sub" data-aos="fade-up">AD/ART, SK kepengurusan, formulir, dan laporan kegiatan komunitas.</p>
+      <div id="docList" data-aos="fade-up"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAK ================= -->
+<section class="page" id="page-kontak">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow" data-aos="fade-up">Hubungi Kami</div>
+      <h2 class="section-title" data-aos="fade-up">Kontak Sekretariat</h2>
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-right">
+          <form class="form-nc" onsubmit="submitContact(event)">
+            <label>Nama Lengkap</label><input type="text" required>
+            <label>Email</label><input type="email" required>
+            <label>Pesan</label><textarea rows="4" required></textarea>
+            <button class="btn-nc btn-accent-nc" type="submit"><i class="fa-solid fa-paper-plane"></i> Kirim Pesan</button>
+          </form>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div id="kontak-map" style="height:230px; border-radius:16px; margin-bottom:16px; border:1px solid var(--line);"></div>
+          <div class="card-nc">
+            <p><i class="fa-solid fa-location-dot" style="color:var(--accent)"></i> Jl. Kebangsaan No. 17, Jakarta Pusat</p>
+            <p><i class="fa-solid fa-envelope" style="color:var(--accent)"></i> sekretariat@komunitasnusantara.id</p>
+            <p><i class="fa-solid fa-phone" style="color:var(--accent)"></i> (021) 555-0192</p>
+            <div style="display:flex; gap:10px; margin-top:14px;">
+              <span class="icon-btn"><i class="fa-brands fa-instagram"></i></span>
+              <span class="icon-btn"><i class="fa-brands fa-x-twitter"></i></span>
+              <span class="icon-btn"><i class="fa-brands fa-youtube"></i></span>
+              <span class="icon-btn"><i class="fa-brands fa-whatsapp"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DASHBOARD ANGGOTA ================= -->
+<section class="page" id="page-dash-anggota">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow">Ruang Pribadi</div>
+      <h2 class="section-title">Dashboard Anggota</h2>
+      <div class="dash-layout">
+        <div class="dash-side">
+          <a href="#" class="active" onclick="showDashPanel('mem-stat',this);return false;"><i class="fa-solid fa-chart-simple"></i> Statistik</a>
+          <a href="#" onclick="showDashPanel('mem-aktivitas',this);return false;"><i class="fa-solid fa-clock-rotate-left"></i> Aktivitas</a>
+          <a href="#" onclick="showDashPanel('mem-event',this);return false;"><i class="fa-solid fa-calendar-check"></i> Event Saya</a>
+          <a href="#" onclick="showDashPanel('mem-post',this);return false;"><i class="fa-solid fa-note-sticky"></i> Postingan Saya</a>
+          <a href="#" onclick="showDashPanel('mem-notif',this);return false;"><i class="fa-solid fa-bell"></i> Notifikasi</a>
+          <a href="#" onclick="showDashPanel('mem-prestasi',this);return false;"><i class="fa-solid fa-trophy"></i> Prestasi</a>
+          <a href="#" onclick="showDashPanel('mem-profil',this);return false;"><i class="fa-solid fa-user"></i> Profil</a>
+          <a href="#" onclick="showDashPanel('mem-setting',this);return false;"><i class="fa-solid fa-gear"></i> Pengaturan</a>
+        </div>
+        <div>
+          <div class="dash-panel active" id="mem-stat">
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num">12</div><div style="font-size:.75rem;color:var(--text-mut)">Postingan</div></div></div>
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num">5</div><div style="font-size:.75rem;color:var(--text-mut)">Event Diikuti</div></div></div>
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num">340</div><div style="font-size:.75rem;color:var(--text-mut)">Poin Prestasi</div></div></div>
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num">28</div><div style="font-size:.75rem;color:var(--text-mut)">Pengikut</div></div></div>
+            </div>
+            <canvas id="chartMemberActivity" height="110"></canvas>
+          </div>
+          <div class="dash-panel" id="mem-aktivitas"><div id="aktivitasList"></div></div>
+          <div class="dash-panel" id="mem-event"><div class="row g-3" id="myEventList"></div></div>
+          <div class="dash-panel" id="mem-post"><div id="myPostList"></div></div>
+          <div class="dash-panel" id="mem-notif"><div id="myNotifList"></div></div>
+          <div class="dash-panel" id="mem-prestasi"><div class="row g-3" id="myPrestasiList"></div></div>
+          <div class="dash-panel" id="mem-profil">
+            <div class="form-nc" style="max-width:480px;">
+              <label>Nama</label><input type="text" id="profNama" value="">
+              <label>Bio</label><textarea id="profBio" rows="3"></textarea>
+              <label>Provinsi/Kota</label><input type="text" id="profLoc" value="">
+              <label>Minat & Keahlian</label><input type="text" id="profSkill" value="">
+              <button class="btn-nc btn-primary-nc" onclick="saveProfile()"><i class="fa-solid fa-floppy-disk"></i> Simpan Profil</button>
+            </div>
+          </div>
+          <div class="dash-panel" id="mem-setting">
+            <div class="card-nc" style="max-width:420px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <span>Mode Gelap</span>
+                <label class="form-check-form-switch"><input type="checkbox" id="darkSwitch" onchange="toggleTheme()"></label>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span>Notifikasi Email</span>
+                <input type="checkbox" checked>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DASHBOARD ADMIN ================= -->
+<section class="page" id="page-dash-admin">
+  <div class="section" style="padding-top:120px;">
+    <div class="container-nc">
+      <div class="eyebrow">Pusat Kendali</div>
+      <h2 class="section-title">Dashboard Admin</h2>
+      <div class="dash-layout">
+        <div class="dash-side">
+          <a href="#" class="active" onclick="showDashPanel('adm-stat',this);return false;"><i class="fa-solid fa-chart-line"></i> Statistik Nasional</a>
+          <a href="#" onclick="showDashPanel('adm-anggota',this);return false;"><i class="fa-solid fa-users"></i> Anggota</a>
+          <a href="#" onclick="showDashPanel('adm-pengurus',this);return false;"><i class="fa-solid fa-user-tie"></i> Pengurus</a>
+          <a href="#" onclick="showDashPanel('adm-wilayah',this);return false;"><i class="fa-solid fa-map-location-dot"></i> Wilayah</a>
+          <a href="#" onclick="showDashPanel('adm-forum',this);return false;"><i class="fa-solid fa-comments"></i> Forum</a>
+          <a href="#" onclick="showDashPanel('adm-berita',this);return false;"><i class="fa-solid fa-newspaper"></i> Berita</a>
+          <a href="#" onclick="showDashPanel('adm-event',this);return false;"><i class="fa-solid fa-calendar-days"></i> Event</a>
+          <a href="#" onclick="showDashPanel('adm-galeri',this);return false;"><i class="fa-solid fa-images"></i> Galeri</a>
+          <a href="#" onclick="showDashPanel('adm-dokumen',this);return false;"><i class="fa-solid fa-file-lines"></i> Dokumen</a>
+          <a href="#" onclick="showDashPanel('adm-laporan',this);return false;"><i class="fa-solid fa-chart-pie"></i> Laporan</a>
+          <a href="#" onclick="showDashPanel('adm-setting',this);return false;"><i class="fa-solid fa-gears"></i> Pengaturan</a>
+        </div>
+        <div>
+          <div class="dash-panel active" id="adm-stat">
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num" id="admStatAnggota">0</div><div style="font-size:.75rem;color:var(--text-mut)">Total Anggota</div></div></div>
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num">38</div><div style="font-size:.75rem;color:var(--text-mut)">Provinsi Aktif</div></div></div>
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num" id="admStatEvent">0</div><div style="font-size:.75rem;color:var(--text-mut)">Event Bulan Ini</div></div></div>
+              <div class="col-6 col-md-3"><div class="dash-stat"><div class="num" id="admStatPost">0</div><div style="font-size:.75rem;color:var(--text-mut)">Postingan Forum</div></div></div>
+            </div>
+            <div class="row g-3">
+              <div class="col-lg-7"><div class="card-nc"><canvas id="chartAdminTren" height="130"></canvas></div></div>
+              <div class="col-lg-5"><div class="card-nc"><canvas id="chartAdminKategori" height="130"></canvas></div></div>
+            </div>
+          </div>
+          <div class="dash-panel" id="adm-anggota"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>ID</th><th>Nama</th><th>Provinsi</th><th>Status</th><th></th></tr></thead><tbody id="admMemberTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-pengurus"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>Nama</th><th>Jabatan</th><th>Wilayah</th><th></th></tr></thead><tbody id="admPengurusTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-wilayah"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>Provinsi</th><th>Anggota</th><th>Cabang</th><th>Koordinator</th><th></th></tr></thead><tbody id="admWilayahTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-forum"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>Postingan</th><th>Penulis</th><th>Kategori</th><th>Like</th><th></th></tr></thead><tbody id="admForumTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-berita"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>Judul</th><th>Kategori</th><th>Dilihat</th><th></th></tr></thead><tbody id="admBeritaTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-event"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>Event</th><th>Tanggal</th><th>Peserta</th><th></th></tr></thead><tbody id="admEventTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-galeri"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>Album</th><th>Jenis</th><th>Daerah</th><th></th></tr></thead><tbody id="admGaleriTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-dokumen"><div class="card-nc"><div style="overflow:auto;"><table class="table-nc"><thead><tr><th>Dokumen</th><th>Kategori</th><th></th></tr></thead><tbody id="admDokumenTable"></tbody></table></div></div></div>
+          <div class="dash-panel" id="adm-laporan">
+            <div class="card-nc">
+              <p class="section-sub" style="margin-bottom:16px;">Unduh ringkasan laporan aktivitas komunitas nasional.</p>
+              <button class="btn-nc btn-primary-nc" onclick="exportLaporan()"><i class="fa-solid fa-file-export"></i> Ekspor Laporan (Simulasi)</button>
+            </div>
+          </div>
+          <div class="dash-panel" id="adm-setting">
+            <div class="form-nc" style="max-width:440px;">
+              <label>Nama Komunitas</label><input type="text" value="Komunitas Nusantara">
+              <label>Warna Tema Utama</label><input type="color" value="#152A52" style="height:44px;">
+              <button class="btn-nc btn-primary-nc" onclick="Swal.fire({icon:'success',title:'Pengaturan disimpan',confirmButtonColor:'var(--accent)'})">Simpan Pengaturan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox-bg" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightboxImg" src="">
+  <div class="lightbox-nav">
+    <button onclick="navLightbox(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+    <button onclick="navLightbox(1)"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+</div>
+
+<button class="back-to-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container-nc">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="brand" style="color:#fff;"><span class="mark"><i class="fa-solid fa-diagram-project"></i></span>Komunitas Nusantara</div>
+        <p style="color:#9fb0c9; font-size:.85rem; margin-top:14px;">Merajut anggota dari 38 provinsi dalam satu jejaring komunitas digital yang terbuka dan kolaboratif.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div style="font-weight:700; margin-bottom:12px;">Jelajahi</div>
+        <div style="display:flex; flex-direction:column; gap:8px; font-size:.83rem; color:#9fb0c9;">
+          <a href="#" onclick="showPage('anggota');return false;" style="color:#9fb0c9;">Anggota</a>
+          <a href="#" onclick="showPage('wilayah');return false;" style="color:#9fb0c9;">Wilayah</a>
+          <a href="#" onclick="showPage('forum');return false;" style="color:#9fb0c9;">Forum</a>
+          <a href="#" onclick="showPage('event');return false;" style="color:#9fb0c9;">Event</a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div style="font-weight:700; margin-bottom:12px;">Informasi</div>
+        <div style="display:flex; flex-direction:column; gap:8px; font-size:.83rem; color:#9fb0c9;">
+          <a href="#" onclick="showPage('struktur');return false;" style="color:#9fb0c9;">Struktur</a>
+          <a href="#" onclick="showPage('dokumen');return false;" style="color:#9fb0c9;">Dokumen</a>
+          <a href="#" onclick="showPage('kontak');return false;" style="color:#9fb0c9;">Kontak</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div style="font-weight:700; margin-bottom:12px;">Buletin Komunitas</div>
+        <div style="display:flex; gap:8px;">
+          <input type="email" placeholder="Email kamu" style="flex:1; border-radius:10px; border:none; padding:10px 12px; font-size:.82rem;">
+          <button class="btn-nc btn-gold-nc">Kirim</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-strip mono">
+      <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+      <span class="tech-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+      <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+      <span class="tech-badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+      <span class="tech-badge"><i class="fa-solid fa-icons"></i> Font Awesome</span>
+      <span class="tech-badge"><i class="fa-solid fa-font"></i> Google Fonts</span>
+      <span class="tech-badge"><i class="fa-solid fa-arrows-up-down"></i> AOS.js</span>
+      <span class="tech-badge"><i class="fa-solid fa-images"></i> Swiper.js</span>
+      <span class="tech-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> GSAP</span>
+      <span class="tech-badge"><i class="fa-solid fa-map"></i> Leaflet.js</span>
+      <span class="tech-badge"><i class="fa-solid fa-chart-column"></i> Chart.js</span>
+      <span class="tech-badge"><i class="fa-solid fa-circle-check"></i> SweetAlert2</span>
+      <span class="tech-badge"><i class="fa-solid fa-cube"></i> Three.js</span>
+    </div>
+    <div class="foot-bottom">© 2026 Komunitas Nusantara. Dibangun dengan semangat gotong royong digital.</div>
+  </div>
+</footer>
+
+<!-- ===== JS LIBRARIES (CDN) ===== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

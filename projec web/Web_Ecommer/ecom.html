@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RIZZ STORE — Belanja Produk Pilihan</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="ecom.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOPBAR
+========================================================= -->
+
+<div class="topbar">
+
+    <div class="topbar-inner wrap">
+
+        <p>
+            ✦ Promo Spesial RIZZ STORE!
+            Diskon hingga 40%
+            <a href="#promo">Belanja Sekarang →</a>
+        </p>
+
+        <p>
+            📦 Gratis ongkir untuk pembelian tertentu
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header
+    class="site-header"
+    id="siteHeader"
+>
+
+    <div class="header-inner wrap">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="#beranda"
+            class="brand"
+        >
+
+            <span class="brand-name">
+                RIZZ
+            </span>
+
+            <span class="brand-sub">
+                STORE
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+        >
+
+            <a
+                href="#beranda"
+                class="nav-link active"
+                data-nav
+            >
+                Beranda
+            </a>
+
+            <a
+                href="#toko"
+                class="nav-link"
+                data-nav
+            >
+                Toko
+            </a>
+
+            <a
+                href="#kategori"
+                class="nav-link"
+                data-nav
+            >
+                Kategori
+            </a>
+
+            <a
+                href="#produk-baru"
+                class="nav-link"
+                data-nav
+            >
+                Produk Baru
+            </a>
+
+            <a
+                href="#promo"
+                class="nav-link"
+                data-nav
+            >
+                Promo
+            </a>
+
+            <a
+                href="#tentang"
+                class="nav-link"
+                data-nav
+            >
+                Tentang Kami
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari produk..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="searchButton"
+                    aria-label="Cari"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <button
+                class="icon-btn"
+                id="accountBtn"
+                type="button"
+                aria-label="Akun"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+            <!-- WISHLIST -->
+
+            <button
+                class="icon-btn"
+                id="wishlistBtn"
+                type="button"
+                aria-label="Produk disukai"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+                <span
+                    class="wishlist-count"
+                    id="wishlistCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+            <!-- CART -->
+
+            <button
+                class="icon-btn"
+                id="cartBtn"
+                type="button"
+                aria-label="Keranjang"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                type="button"
+                aria-label="Menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="hero reveal"
+    id="beranda"
+>
+
+    <div class="hero-glow glow-mint"></div>
+
+    <div class="hero-glow glow-gold"></div>
+
+
+    <div class="wrap hero-grid">
+
+
+        <!-- HERO TEXT -->
+
+        <div class="hero-content reveal">
+
+            <span class="chip">
+                ✦ KOLEKSI TERBARU
+            </span>
+
+            <h1 class="hero-title">
+
+                Temukan
+                <em>gaya terbaik</em>
+                untukmu.
+
+            </h1>
+
+            <p class="hero-desc">
+
+                Temukan berbagai produk pilihan
+                mulai dari aksesoris, elektronik,
+                fashion hingga kebutuhan sehari-hari
+                hanya di RIZZ STORE.
+
+            </p>
+
+
+            <div class="hero-cta">
+
+                <a
+                    href="#toko"
+                    class="btn btn-primary"
+                >
+                    Belanja Sekarang
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    href="#kategori"
+                    class="btn btn-outline"
+                >
+                    Lihat Kategori
+                </a>
+
+            </div>
+
+
+            <div class="hero-dots">
+
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HERO IMAGE -->
+
+        <div class="hero-visual reveal">
+
+            <div class="hero-podium"></div>
+
+            <div class="hero-photo">
+
+                <img
+                    src="img/Lifestyle.jpg"
+                    alt="Koleksi RIZZ STORE"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     KATEGORI
+========================================================= -->
+
+<section
+    class="section reveal"
+    id="kategori"
+>
+
+    <div class="wrap">
+
+
+        <div class="section-head">
+
+            <div>
+
+                <span class="badge-pill">
+                    KATEGORI
+                </span>
+
+                <h2>
+                    Pilih sesuai kebutuhanmu
+                </h2>
+
+            </div>
+
+            <a
+                href="#toko"
+                class="view-all"
+            >
+                Lihat Semua →
+            </a>
+
+        </div>
+
+
+
+        <div class="category-grid">
+
+
+            <!-- 1 -->
+
+            <a
+                href="#toko"
+                class="category-card reveal"
+            >
+
+                <img
+                    src="img/Aksesoris.jpg"
+                    alt="Aksesoris"
+                >
+
+                <div class="category-info">
+
+                    <div>
+
+                        <b>Aksesoris</b>
+
+                        <span>
+                            Produk pilihan
+                        </span>
+
+                    </div>
+
+                    <span class="cat-arrow">
+                        →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- 2 -->
+
+            <a
+                href="#toko"
+                class="category-card reveal"
+            >
+
+                <img
+                    src="img/Aurora X1 Headphones.jpg"
+                    alt="Audio"
+                >
+
+                <div class="category-info">
+
+                    <div>
+
+                        <b>Audio</b>
+
+                        <span>
+                            Headphone & speaker
+                        </span>
+
+                    </div>
+
+                    <span class="cat-arrow">
+                        →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- 3 -->
+
+            <a
+                href="#toko"
+                class="category-card reveal"
+            >
+
+                <img
+                    src="img/Hoodie Oversize Black.jpg"
+                    alt="Fashion"
+                >
+
+                <div class="category-info">
+
+                    <div>
+
+                        <b>Fashion</b>
+
+                        <span>
+                            Gaya kekinian
+                        </span>
+
+                    </div>
+
+                    <span class="cat-arrow">
+                        →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- 4 -->
+
+            <a
+                href="#toko"
+                class="category-card reveal"
+            >
+
+                <img
+                    src="img/Smartwatch.jpg"
+                    alt="Gadget"
+                >
+
+                <div class="category-info">
+
+                    <div>
+
+                        <b>Gadget</b>
+
+                        <span>
+                            Teknologi terbaru
+                        </span>
+
+                    </div>
+
+                    <span class="cat-arrow">
+                        →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- 5 -->
+
+            <a
+                href="#toko"
+                class="category-card reveal"
+            >
+
+                <img
+                    src="img/Travel Backpack.jpg"
+                    alt="Lifestyle"
+                >
+
+                <div class="category-info">
+
+                    <div>
+
+                        <b>Lifestyle</b>
+
+                        <span>
+                            Teman aktivitasmu
+                        </span>
+
+                    </div>
+
+                    <span class="cat-arrow">
+                        →
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUK TERLARIS
+========================================================= -->
+
+<section
+    class="section reveal"
+    id="toko"
+>
+
+    <div class="wrap">
+
+
+        <div class="section-head">
+
+            <div>
+
+                <span class="badge-pill">
+                    RIZZ STORE
+                </span>
+
+                <h2>
+                    Produk Terlaris
+                </h2>
+
+            </div>
+
+            <span class="view-all">
+                Pilihan terbaik untukmu
+            </span>
+
+        </div>
+
+
+
+        <div
+            class="product-grid"
+            id="bestselling"
+        >
+
+
+            <!-- =================================================
+                 PRODUCT 1
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora Buds 2"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora Buds 2.jpg"
+                        alt="Aurora Buds 2"
+                    >
+
+                    <span class="badge badge-sale">
+                        SALE
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora Buds 2"
+                        data-price="299000"
+                        aria-label="Sukai Aurora Buds 2"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora Buds 2"
+                        data-price="299000"
+                        aria-label="Tambah Aurora Buds 2"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(128)</span>
+                    </p>
+
+                    <h3>
+                        Aurora Buds 2
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp299.000
+                        </b>
+
+                        <s>
+                            Rp399.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 2
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora Buds 3"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora Buds 3.jpg"
+                        alt="Aurora Buds 3"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora Buds 3"
+                        data-price="449000"
+                        aria-label="Sukai Aurora Buds 3"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora Buds 3"
+                        data-price="449000"
+                        aria-label="Tambah Aurora Buds 3"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(96)</span>
+                    </p>
+
+                    <h3>
+                        Aurora Buds 3
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp449.000
+                        </b>
+
+                        <s>
+                            Rp599.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 3
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora Duffle Bag"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora Duffle Bag.jpg"
+                        alt="Aurora Duffle Bag"
+                    >
+
+                    <span class="badge badge-sale">
+                        SALE
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora Duffle Bag"
+                        data-price="389000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora Duffle Bag"
+                        data-price="389000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(74)</span>
+                    </p>
+
+                    <h3>
+                        Aurora Duffle Bag
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp389.000
+                        </b>
+
+                        <s>
+                            Rp499.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 4
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora Fit Pro Watch"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora Fit Pro Watch.jpg"
+                        alt="Aurora Fit Pro Watch"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora Fit Pro Watch"
+                        data-price="799000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora Fit Pro Watch"
+                        data-price="799000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(143)</span>
+                    </p>
+
+                    <h3>
+                        Aurora Fit Pro Watch
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp799.000
+                        </b>
+
+                        <s>
+                            Rp999.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 5
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora Shades Pro"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora Shades Pro.jpg"
+                        alt="Aurora Shades Pro"
+                    >
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora Shades Pro"
+                        data-price="249000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora Shades Pro"
+                        data-price="249000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★☆
+                        <span>(61)</span>
+                    </p>
+
+                    <h3>
+                        Aurora Shades Pro
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp249.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 6
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora SoundBar"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora SoundBar.jpg"
+                        alt="Aurora SoundBar"
+                    >
+
+                    <span class="badge badge-sale">
+                        SALE
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora SoundBar"
+                        data-price="899000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora SoundBar"
+                        data-price="899000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(87)</span>
+                    </p>
+
+                    <h3>
+                        Aurora SoundBar
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp899.000
+                        </b>
+
+                        <s>
+                            Rp1.199.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 7
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora Watch Ultra"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora Watch Ultra.jpg"
+                        alt="Aurora Watch Ultra"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora Watch Ultra"
+                        data-price="1299000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora Watch Ultra"
+                        data-price="1299000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(112)</span>
+                    </p>
+
+                    <h3>
+                        Aurora Watch Ultra
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp1.299.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 8
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora X1 Headphones"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora X1 Headphones.jpg"
+                        alt="Aurora X1 Headphones"
+                    >
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora X1 Headphones"
+                        data-price="699000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora X1 Headphones"
+                        data-price="699000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(154)</span>
+                    </p>
+
+                    <h3>
+                        Aurora X1 Headphones
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp699.000
+                        </b>
+
+                        <s>
+                            Rp899.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 9
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Hoodie Oversize Black"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Hoodie Oversize Black.jpg"
+                        alt="Hoodie Oversize Black"
+                    >
+
+                    <span class="badge badge-sale">
+                        SALE
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Hoodie Oversize Black"
+                        data-price="279000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Hoodie Oversize Black"
+                        data-price="279000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(203)</span>
+                    </p>
+
+                    <h3>
+                        Hoodie Oversize Black
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp279.000
+                        </b>
+
+                        <s>
+                            Rp399.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 10
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Mini Speaker"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Mini Speaker.jpg"
+                        alt="Mini Speaker"
+                    >
+
+                    <span class="badge badge-sale">
+                        SALE
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Mini Speaker"
+                        data-price="159000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Mini Speaker"
+                        data-price="159000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★☆
+                        <span>(92)</span>
+                    </p>
+
+                    <h3>
+                        Mini Speaker
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp159.000
+                        </b>
+
+                        <s>
+                            Rp229.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 11
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Power Bank 20K"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Power Bank 20K.jpg"
+                        alt="Power Bank 20K"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Power Bank 20K"
+                        data-price="329000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Power Bank 20K"
+                        data-price="329000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(176)</span>
+                    </p>
+
+                    <h3>
+                        Power Bank 20K
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp329.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 12
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Smartwatch"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Smartwatch.jpg"
+                        alt="Smartwatch"
+                    >
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Smartwatch"
+                        data-price="499000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Smartwatch"
+                        data-price="499000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★☆
+                        <span>(118)</span>
+                    </p>
+
+                    <h3>
+                        Smartwatch
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp499.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 13
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Speaker"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Speaker.jpg"
+                        alt="Speaker"
+                    >
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Speaker"
+                        data-price="399000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Speaker"
+                        data-price="399000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(84)</span>
+                    </p>
+
+                    <h3>
+                        Speaker
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp399.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 14
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Travel Backpack"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Travel Backpack.jpg"
+                        alt="Travel Backpack"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Travel Backpack"
+                        data-price="359000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Travel Backpack"
+                        data-price="359000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(137)</span>
+                    </p>
+
+                    <h3>
+                        Travel Backpack
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp359.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 15
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Wireless Charger"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Wireless Charger.jpg"
+                        alt="Wireless Charger"
+                    >
+
+                    <span class="badge badge-sale">
+                        SALE
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Wireless Charger"
+                        data-price="189000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Wireless Charger"
+                        data-price="189000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★☆
+                        <span>(79)</span>
+                    </p>
+
+                    <h3>
+                        Wireless Charger
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp189.000
+                        </b>
+
+                        <s>
+                            Rp249.000
+                        </s>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 16
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aksesoris"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aksesoris.jpg"
+                        alt="Aksesoris"
+                    >
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aksesoris"
+                        data-price="129000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aksesoris"
+                        data-price="129000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(64)</span>
+                    </p>
+
+                    <h3>
+                        Aksesoris
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp129.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 17
+            ================================================== -->
+
+            <article
+                class="product-card reveal"
+                data-name="Lifestyle"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Lifestyle.jpg"
+                        alt="Lifestyle"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Lifestyle"
+                        data-price="199000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Lifestyle"
+                        data-price="199000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★☆
+                        <span>(53)</span>
+                    </p>
+
+                    <h3>
+                        Lifestyle
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp199.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROMO
+========================================================= -->
+
+<section
+    class="sale-banner reveal"
+    id="promo"
+>
+
+    <div class="wrap sale-inner">
+
+
+        <div class="sale-copy">
+
+            <span class="chip chip-dark">
+                PROMO TERBATAS
+            </span>
+
+            <h2>
+                Diskon sampai 40%
+            </h2>
+
+            <p>
+                Jangan sampai kelewatan produk favoritmu.
+            </p>
+
+        </div>
+
+
+
+        <div class="countdown">
+
+            <div class="count-box">
+
+                <span id="cd-days">
+                    02
+                </span>
+
+                <small>
+                    Hari
+                </small>
+
+            </div>
+
+            <div class="count-box">
+
+                <span id="cd-hours">
+                    14
+                </span>
+
+                <small>
+                    Jam
+                </small>
+
+            </div>
+
+            <div class="count-box">
+
+                <span id="cd-mins">
+                    36
+                </span>
+
+                <small>
+                    Menit
+                </small>
+
+            </div>
+
+            <div class="count-box">
+
+                <span id="cd-secs">
+                    45
+                </span>
+
+                <small>
+                    Detik
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUK BARU
+========================================================= -->
+
+<section
+    class="section reveal"
+    id="produk-baru"
+>
+
+    <div class="wrap">
+
+        <div class="section-head">
+
+            <div>
+
+                <span class="badge-pill">
+                    TERBARU
+                </span>
+
+                <h2>
+                    Produk Baru
+                </h2>
+
+            </div>
+
+            <span class="view-all">
+                Selalu update
+            </span>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- NEW 1 -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora X1 Headphones"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora X1 Headphones.jpg"
+                        alt="Aurora X1 Headphones"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora X1 Headphones"
+                        data-price="699000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora X1 Headphones"
+                        data-price="699000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(154)</span>
+                    </p>
+
+                    <h3>
+                        Aurora X1 Headphones
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp699.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEW 2 -->
+
+            <article
+                class="product-card reveal"
+                data-name="Aurora Watch Ultra"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Aurora Watch Ultra.jpg"
+                        alt="Aurora Watch Ultra"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Aurora Watch Ultra"
+                        data-price="1299000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Aurora Watch Ultra"
+                        data-price="1299000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(112)</span>
+                    </p>
+
+                    <h3>
+                        Aurora Watch Ultra
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp1.299.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEW 3 -->
+
+            <article
+                class="product-card reveal"
+                data-name="Power Bank 20K"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Power Bank 20K.jpg"
+                        alt="Power Bank 20K"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Power Bank 20K"
+                        data-price="329000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Power Bank 20K"
+                        data-price="329000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(176)</span>
+                    </p>
+
+                    <h3>
+                        Power Bank 20K
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp329.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEW 4 -->
+
+            <article
+                class="product-card reveal"
+                data-name="Travel Backpack"
+            >
+
+                <div class="product-photo">
+
+                    <img
+                        src="img/Travel Backpack.jpg"
+                        alt="Travel Backpack"
+                    >
+
+                    <span class="badge badge-new">
+                        BARU
+                    </span>
+
+                    <button
+                        class="wish-btn"
+                        type="button"
+                        data-product="Travel Backpack"
+                        data-price="359000"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        data-add-cart
+                        data-product="Travel Backpack"
+                        data-price="359000"
+                    >
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="product-body">
+
+                    <p class="rating">
+                        ★★★★★
+                        <span>(137)</span>
+                    </p>
+
+                    <h3>
+                        Travel Backpack
+                    </h3>
+
+                    <p class="price">
+
+                        <b>
+                            Rp359.000
+                        </b>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="features-bar reveal">
+
+    <div class="wrap features-grid">
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+
+            <div>
+
+                <b>
+                    Pengiriman Cepat
+                </b>
+
+                <p>
+                    Pesanan dikirim dengan aman.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+
+                <b>
+                    Belanja Aman
+                </b>
+
+                <p>
+                    Transaksi lebih nyaman.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-rotate-left"></i>
+            </div>
+
+            <div>
+
+                <b>
+                    Mudah Dikembalikan
+                </b>
+
+                <p>
+                    Proses pengembalian mudah.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+
+                <b>
+                    Bantuan Pelanggan
+                </b>
+
+                <p>
+                    Kami siap membantu.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div>
+
+                <b>
+                    Produk Berkualitas
+                </b>
+
+                <p>
+                    Pilihan terbaik untukmu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TESTIMONIAL
+========================================================= -->
+
+<section
+    class="section reveal"
+    id="tentang"
+>
+
+    <div class="wrap">
+
+
+        <div class="section-head">
+
+            <div>
+
+                <span class="badge-pill">
+                    TESTIMONI
+                </span>
+
+                <h2>
+                    Kata mereka tentang RIZZ
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="testi-wrap">
+
+
+            <button
+                class="testi-arrow"
+                id="testiPrev"
+                type="button"
+                aria-label="Sebelumnya"
+            >
+                ←
+            </button>
+
+
+            <div class="testi-grid">
+
+
+                <blockquote class="testi-card">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <p>
+                        Produknya bagus dan proses
+                        pesanannya gampang banget.
+                    </p>
+
+                    <footer>
+
+                        <div>
+
+                            <b>
+                                Rizky
+                            </b>
+
+                            <span>
+                                Pelanggan RIZZ
+                            </span>
+
+                        </div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                    </footer>
+
+                </blockquote>
+
+
+
+                <blockquote class="testi-card">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <p>
+                        Barang sesuai foto dan
+                        pengirimannya juga cepat.
+                    </p>
+
+                    <footer>
+
+                        <div>
+
+                            <b>
+                                Fajar
+                            </b>
+
+                            <span>
+                                Pelanggan RIZZ
+                            </span>
+
+                        </div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                    </footer>
+
+                </blockquote>
+
+
+
+                <blockquote class="testi-card">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <p>
+                        Banyak pilihan produk dan
+                        harganya cukup menarik.
+                    </p>
+
+                    <footer>
+
+                        <div>
+
+                            <b>
+                                Dimas
+                            </b>
+
+                            <span>
+                                Pelanggan RIZZ
+                            </span>
+
+                        </div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                    </footer>
+
+                </blockquote>
+
+
+            </div>
+
+
+            <button
+                class="testi-arrow"
+                id="testiNext"
+                type="button"
+                aria-label="Berikutnya"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     NEWSLETTER / EMAIL
+========================================================= -->
+
+<section class="newsletter reveal">
+
+    <div class="wrap newsletter-inner">
+
+
+        <div class="newsletter-icon">
+
+            <i class="fa-regular fa-envelope"></i>
+
+        </div>
+
+
+        <div class="newsletter-copy">
+
+            <h3>
+                Dapatkan info promo terbaru
+            </h3>
+
+            <p>
+                Masukkan email kamu untuk mendapatkan
+                informasi dari RIZZ STORE.
+            </p>
+
+        </div>
+
+
+        <form
+            class="newsletter-form"
+            id="newsletterForm"
+        >
+
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Email kamu..."
+                autocomplete="email"
+                required
+            >
+
+            <button type="submit">
+                Daftar
+            </button>
+
+        </form>
+
+
+        <div
+            class="newsletter-success"
+            id="newsletterSuccess"
+        >
+            ✓ Email berhasil disimpan.
+            Terima kasih sudah berlangganan RIZZ STORE!
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="wrap footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a
+                href="#beranda"
+                class="brand"
+            >
+
+                <span class="brand-name">
+                    RIZZ
+                </span>
+
+                <span class="brand-sub">
+                    STORE
+                </span>
+
+            </a>
+
+            <p>
+                Tempat belanja produk pilihan
+                dengan gaya modern dan harga
+                yang bersahabat.
+            </p>
+
+
+            <div class="footer-social">
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    TikTok
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BELANJA -->
+
+        <div class="footer-col">
+
+            <h4>
+                Belanja
+            </h4>
+
+            <a href="#toko">
+                Semua Produk
+            </a>
+
+            <a href="#kategori">
+                Kategori
+            </a>
+
+            <a href="#produk-baru">
+                Produk Baru
+            </a>
+
+            <a href="#promo">
+                Promo
+            </a>
+
+        </div>
+
+
+
+        <!-- BANTUAN -->
+
+        <div class="footer-col">
+
+            <h4>
+                Bantuan
+            </h4>
+
+            <a href="#">
+                Cara Belanja
+            </a>
+
+            <a href="#">
+                Pengiriman
+            </a>
+
+            <a href="#">
+                Pengembalian
+            </a>
+
+            <a href="#">
+                Hubungi Kami
+            </a>
+
+        </div>
+
+
+
+        <!-- TENTANG -->
+
+        <div class="footer-col">
+
+            <h4>
+                RIZZ STORE
+            </h4>
+
+            <a href="#tentang">
+                Tentang Kami
+            </a>
+
+            <a href="#">
+                Kebijakan Privasi
+            </a>
+
+            <a href="#">
+                Syarat & Ketentuan
+            </a>
+
+        </div>
+
+
+
+        <!-- KONTAK -->
+
+        <div class="footer-col">
+
+            <h4>
+                Kontak
+            </h4>
+
+            <span>
+                📧 support@rizzstore.com
+            </span>
+
+            <span>
+                📱 +62 812-3456-7890
+            </span>
+
+            <span>
+                📍 Indonesia
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="wrap footer-bottom">
+
+
+        <span>
+            © 2026 RIZZ STORE. Semua hak dilindungi.
+        </span>
+
+
+        <div class="footer-legal">
+
+            <span>
+                Pembayaran:
+            </span>
+
+            <div class="payment-icons">
+
+                <span>
+                    QRIS
+                </span>
+
+                <span>
+                    VISA
+                </span>
+
+                <span>
+                    DANA
+                </span>
+
+                <span>
+                    OVO
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     ACCOUNT MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="accountModal"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            type="button"
+            data-close="accountModal"
+        >
+            ×
+        </button>
+
+
+        <span class="badge-pill">
+            AKUN
+        </span>
+
+        <h2>
+            Halo!
+        </h2>
+
+        <p class="modal-subtitle">
+            Masukkan username kamu.
+        </p>
+
+
+        <input
+            type="text"
+            id="usernameInput"
+            placeholder="Username kamu"
+            maxlength="30"
+            autocomplete="off"
+        >
+
+
+        <button
+            class="modal-submit"
+            id="saveUsername"
+            type="button"
+        >
+            Simpan Username
+        </button>
+
+
+        <p
+            class="saved-user"
+            id="savedUser"
+        >
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     CART MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="cartModal"
+>
+
+    <div class="cart-modal-box">
+
+        <button
+            class="modal-close"
+            type="button"
+            data-close="cartModal"
+        >
+            ×
+        </button>
+
+
+        <span class="badge-pill">
+            KERANJANG
+        </span>
+
+        <h2>
+            Keranjang Saya
+        </h2>
+
+        <p class="modal-subtitle">
+            <span id="cartModalCount">
+                0
+            </span>
+            produk
+        </p>
+
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        >
+
+            <div class="empty-cart">
+                Keranjang kamu masih kosong.
+            </div>
+
+        </div>
+
+
+        <div class="cart-summary">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                Rp0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="buy-cart-btn"
+            id="buyCartBtn"
+            type="button"
+            disabled
+        >
+            Beli Sekarang
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     WISHLIST MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="wishlistModal"
+>
+
+    <div class="cart-modal-box">
+
+        <button
+            class="modal-close"
+            type="button"
+            data-close="wishlistModal"
+        >
+            ×
+        </button>
+
+
+        <span class="badge-pill">
+            FAVORIT
+        </span>
+
+        <h2>
+            Produk yang Disukai
+        </h2>
+
+        <p class="modal-subtitle">
+            Produk favorit kamu.
+        </p>
+
+
+        <div
+            class="cart-items"
+            id="wishlistItems"
+        >
+
+            <div class="empty-cart">
+                Belum ada produk yang kamu sukai.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="ecom.js"></script>
+
+
+</body>
+
+</html>

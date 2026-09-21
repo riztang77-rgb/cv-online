@@ -55,6 +55,7 @@ body {
 
 body::before {
     content: "";
+
     position: fixed;
     inset: 0;
 
@@ -403,17 +404,7 @@ section::before {
     }
 }
 
-@keyframes rotateRing {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotateRingReverse {
-    to {
-        transform: rotate(-360deg);
-    }
-}
+/* Ring biru dihapus */
 
 .home-img img {
     position: relative;
@@ -425,6 +416,8 @@ section::before {
     object-fit: contain;
 
     border: none;
+    border-radius: 0;
+
     box-shadow: none;
 
     z-index: 2;
@@ -433,22 +426,14 @@ section::before {
 }
 
 @keyframes profileFloat {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-15px);
     }
-}
-
-.home-img img:hover {
-    transform: scale(1.04);
-
-    box-shadow:
-        0 0 25px var(--cyan),
-        0 0 70px rgba(0, 245, 255, .7),
-        0 0 120px rgba(0, 245, 255, .3);
 }
 
 /* =========================================================
@@ -649,27 +634,21 @@ section::before {
 
     border: none;
     border-radius: 0;
+
     box-shadow: none;
 
     animation: aboutFloat 5s ease-in-out infinite;
 }
 
 @keyframes aboutFloat {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
 
     50% {
         transform: translateY(-12px) rotate(1deg);
     }
-}
-
-.about-img img:hover {
-    transform: rotate(-2deg) scale(1.03);
-
-    box-shadow:
-        0 0 25px var(--cyan),
-        0 0 60px rgba(0, 245, 255, .25);
 }
 
 .about-text {
@@ -931,7 +910,6 @@ section::before {
 
     line-height: 1.8;
 }
-
 /* =========================================================
    EXPERIENCE
 ========================================================= */
@@ -1220,13 +1198,39 @@ section::before {
 ========================================================= */
 
 .portfolio-content {
-    display: grid;
+    display: flex !important;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
+    flex-direction: row !important;
+
+    flex-wrap: nowrap !important;
 
     gap: 25px;
+
+    width: 100%;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    scroll-behavior: smooth;
+
+    padding-bottom: 15px;
 }
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.portfolio-content .project-card {
+    flex: 0 0 300px !important;
+
+    width: 300px !important;
+
+    min-width: 300px !important;
+
+    max-width: 300px !important;
+}
+
 
 .project-card {
     position: relative;
@@ -1242,7 +1246,37 @@ section::before {
     opacity: 0;
 
     transform: scale(.92);
+
+    flex-shrink: 0;
 }
+
+
+/* =========================================================
+   HORIZONTAL SCROLLBAR
+========================================================= */
+
+.portfolio-content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.portfolio-content::-webkit-scrollbar-track {
+    background: #020608;
+}
+
+.portfolio-content::-webkit-scrollbar-thumb {
+    background: #087f86;
+
+    border-radius: 20px;
+}
+
+.portfolio-content::-webkit-scrollbar-thumb:hover {
+    background: var(--cyan);
+}
+
+
+/* =========================================================
+   PROJECT REVEAL
+========================================================= */
 
 .portfolio.show .project-card {
     animation: projectReveal .8s forwards;
@@ -1256,15 +1290,63 @@ section::before {
     animation-delay: .3s;
 }
 
+.portfolio.show .project-card:nth-child(4) {
+    animation-delay: .45s;
+}
+
+.portfolio.show .project-card:nth-child(5) {
+    animation-delay: .6s;
+}
+
+.portfolio.show .project-card:nth-child(6) {
+    animation-delay: .75s;
+}
+
+.portfolio.show .project-card:nth-child(7) {
+    animation-delay: .9s;
+}
+
+.portfolio.show .project-card:nth-child(8) {
+    animation-delay: 1.05s;
+}
+
+.portfolio.show .project-card:nth-child(9) {
+    animation-delay: 1.2s;
+}
+
+.portfolio.show .project-card:nth-child(10) {
+    animation-delay: 1.35s;
+}
+
+.portfolio.show .project-card:nth-child(11) {
+    animation-delay: 1.5s;
+}
+
+.portfolio.show .project-card:nth-child(12) {
+    animation-delay: 1.65s;
+}
+
+.portfolio.show .project-card:nth-child(13) {
+    animation-delay: 1.8s;
+}
+
+
 @keyframes projectReveal {
     to {
         opacity: 1;
+
         transform: scale(1);
     }
 }
 
+
+/* =========================================================
+   PROJECT IMAGE
+========================================================= */
+
 .project-card img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -1274,11 +1356,17 @@ section::before {
         filter .5s;
 }
 
+
 .project-card:hover img {
     transform: scale(1.12);
 
     filter: brightness(.65);
 }
+
+
+/* =========================================================
+   PROJECT LAYER
+========================================================= */
 
 .layer {
     position: absolute;
@@ -1314,11 +1402,17 @@ section::before {
     transition: .5s;
 }
 
+
 .project-card:hover .layer {
     opacity: 1;
 
     transform: translateY(0);
 }
+
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
 
 .layer h3 {
     color: #021014;
@@ -1328,16 +1422,27 @@ section::before {
     font-size: 25px;
 }
 
+
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
+
 .layer p {
     color: #06161b;
 
     line-height: 1.6;
 }
 
+
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
 .layer a {
     margin-top: 18px;
 
     width: 48px;
+
     height: 48px;
 
     border-radius: 50%;
@@ -1349,6 +1454,7 @@ section::before {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     text-decoration: none;
@@ -1357,6 +1463,7 @@ section::before {
 
     transition: .3s;
 }
+
 
 .layer a:hover {
     transform: rotate(45deg) scale(1.1);
@@ -1370,12 +1477,38 @@ section::before {
 ========================================================= */
 
 .certificate-box {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
 
     gap: 25px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    padding-bottom: 15px;
+}
+
+.certificate-box .certificate-card {
+    flex: 0 0 280px;
+}
+
+.certificate-box::-webkit-scrollbar {
+    height: 8px;
+}
+
+.certificate-box::-webkit-scrollbar-track {
+    background: #020608;
+}
+
+.certificate-box::-webkit-scrollbar-thumb {
+    background: #087f86;
+
+    border-radius: 20px;
+}
+
+.certificate-box::-webkit-scrollbar-thumb:hover {
+    background: var(--cyan);
 }
 
 .certificate-card {
@@ -1613,7 +1746,6 @@ section::before {
 
     transform: translateY(-3px);
 }
-
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1674,29 +1806,42 @@ section::before {
 }
 
 /* =========================================================
-   RESPONSIVE
+   CERTIFICATE VIEW BUTTON
 ========================================================= */
 
-
-/* ===== CERTIFICATE VIEW BUTTON ===== */
 .certificate-btn {
     display: inline-block;
+
     margin-top: 12px;
+
     padding: 9px 18px;
+
     border: 1px solid #0ef;
+
     border-radius: 20px;
+
     color: #0ef;
+
     text-decoration: none;
+
     font-size: 14px;
+
     font-weight: 600;
+
     transition: .3s ease;
 }
 
 .certificate-btn:hover {
     background: #0ef;
+
     color: #081b29;
+
     box-shadow: 0 0 12px #0ef;
 }
+
+/* =========================================================
+   RESPONSIVE 1100px
+========================================================= */
 
 @media (max-width: 1100px) {
 
@@ -1721,19 +1866,15 @@ section::before {
 
     .home-img img {
         width: 330px;
-        height: 330px;
+        max-width: 100%;
+        height: auto;
     }
 
-    .home-img::before {
-        width: 300px;
-        height: 300px;
-    }
-
-    .home-img::after {
-        width: 350px;
-        height: 350px;
-    }
 }
+
+/* =========================================================
+   RESPONSIVE 900px
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -1784,7 +1925,9 @@ section::before {
 
     .contact-list {
         text-align: left;
+
         max-width: 420px;
+
         margin-left: auto;
         margin-right: auto;
     }
@@ -1797,6 +1940,10 @@ section::before {
         display: none;
     }
 }
+
+/* =========================================================
+   RESPONSIVE 600px
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -1826,17 +1973,8 @@ section::before {
 
     .home-img img {
         width: 260px;
-        height: 260px;
-    }
-
-    .home-img::before {
-        width: 230px;
-        height: 230px;
-    }
-
-    .home-img::after {
-        width: 280px;
-        height: 280px;
+        max-width: 100%;
+        height: auto;
     }
 
     .home-content h3 {
@@ -1849,6 +1987,7 @@ section::before {
 
     .home-content p {
         font-size: 14px;
+
         line-height: 1.8;
     }
 
@@ -1865,7 +2004,8 @@ section::before {
 
     .about-img img {
         width: 280px;
-        height: 280px;
+        max-width: 100%;
+        height: auto;
     }
 
     .about-text h2 {
@@ -1901,11 +2041,23 @@ section::before {
     }
 
     .portfolio-content {
-        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-content .project-card {
+        flex: 0 0 280px;
     }
 
     .project-card {
         height: 250px;
+    }
+
+    .certificate-box {
+        gap: 20px;
+    }
+
+    .certificate-box .certificate-card {
+        flex: 0 0 270px;
     }
 
     .contact h2 {
@@ -1928,23 +2080,62 @@ section::before {
     *::before,
     *::after {
         animation-duration: .01ms !important;
+
         animation-iteration-count: 1 !important;
+
         transition-duration: .01ms !important;
+
         scroll-behavior: auto !important;
     }
 }
 
-/* =============================
+/* =========================================================
    EMAIL LINK
-============================= */
+========================================================= */
 
 .email-link {
     color: #ddd;
+
     text-decoration: none;
+
     transition: .3s;
 }
 
 .email-link:hover {
     color: var(--cyan);
-    text-shadow: 0 0 10px var(--cyan);
+
+    text-shadow:
+        0 0 10px var(--cyan);
+}
+/* ===== TEST PORTFOLIO HORIZONTAL ===== */
+
+.portfolio .portfolio-content {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    width: 100% !important;
+
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+
+    gap: 25px !important;
+    padding: 20px !important;
+
+    box-sizing: border-box !important;
+}
+
+.portfolio .portfolio-content .project-card {
+    display: block !important;
+
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+
+    height: 280px !important;
+
+    flex-shrink: 0 !important;
+
+    box-sizing: border-box !important;
 }

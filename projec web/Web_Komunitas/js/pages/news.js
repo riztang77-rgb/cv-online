@@ -1,0 +1,8 @@
+// =====================================================
+// BERITA
+// =====================================================
+const NEWS_CATS=['Semua','Pengumuman','Artikel','Prestasi','Berita'];let activeNewsCat='Semua';
+function renderNewsChips(){document.getElementById('newsCatChips').innerHTML=NEWS_CATS.map(c=>`<button class="chip-btn ${c===activeNewsCat?'active':''}" onclick="setNewsCat('${c}')">${c}</button>`).join('');}
+function setNewsCat(c){activeNewsCat=c;renderNewsChips();renderNews();}
+function renderNews(){const q=(document.getElementById('newsSearch')?.value||'').toLowerCase();const list=NEWS.filter(n=>(activeNewsCat==='Semua'||n.cat===activeNewsCat)&&n.title.toLowerCase().includes(q));document.getElementById('newsGrid').innerHTML=list.map(n=>`<div class="col-md-6 col-lg-4"><div class="card-nc" style="padding:0;overflow:hidden;cursor:pointer" onclick="openNewsDetail(${n.id})"><img src="${n.img}" style="width:100%;height:180px;object-fit:cover"><div style="padding:18px"><span class="tag-pill red">${n.cat}</span><h4>${n.title}</h4><p style="font-size:.82rem;color:var(--text-mut)">${n.excerpt}</p><small>${newsViewState[n.id]||n.views} dilihat · ${n.date}</small></div></div></div>`).join('');}
+function openNewsDetail(id){const n=NEWS.find(x=>x.id===id);newsViewState[id]=(newsViewState[id]||n.views)+1;renderNews();Swal.fire({title:n.title,imageUrl:n.img,imageHeight:220,html:`<p style="text-align:left">${n.excerpt} Artikel ini merupakan contoh konten demo.</p><small>${n.date} · ${newsViewState[id]} kali dilihat</small>`,confirmButtonText:'Tutup',confirmButtonColor:'#152A52',width:560});}
